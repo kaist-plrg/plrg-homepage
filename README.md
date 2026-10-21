@@ -11,7 +11,7 @@ data/
   profile.yml                   교수 페이지 (상단 프로필, Overview, Biography)
   settings.yml                  Home 문구, 최신 논문 개수, 연구 분야, Publications 묶음 연도
 photos/
-  ryu.png                       교수 프로필 사진 (profile.yml → photo)
+  ryu.png                       교수님 프로필 사진 (profile.yml → photo)
   gallery/                      Photos 탭 — 이미지 파일만
 index.html members.html research.html publications.html ryu.html   페이지 틀
 site.js        yml 파서 + 정렬 + 렌더링
