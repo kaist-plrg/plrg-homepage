@@ -8,7 +8,7 @@ data/
   publications.yml              논문 2026~ (새 논문은 여기)
   publications-until-2025.yml   논문 ~2025 (형식 동일, 사이트에서 병합)
   members.yml                   카테고리별 멤버 + Alumni
-  profile.yml                   교수 페이지 (상단 프로필, Overview, Biography)
+  profile.yml                   교수님 페이지 (상단 프로필, Overview, Biography)
   settings.yml                  Home 문구, 최신 논문 개수, 연구 분야, Publications 묶음 연도
 photos/
   ryu.png                       교수님 프로필 사진 (profile.yml → photo)
