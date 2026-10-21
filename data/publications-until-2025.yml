@@ -1,0 +1,1005 @@
+# ═════════════════════════════════════════════════════════════════════════
+#  논문 목록 — 2025년 이전     (과거 논문을 고칠 때만 여는 파일)
+#  새 논문은 publications.yml 에 추가하세요. 형식은 완전히 같습니다.
+# ═════════════════════════════════════════════════════════════════════════
+# ─ 형식 ──────────────────────────────────────────────────────────────────
+#  YAML 서브셋 (site.js 내장 파서): 맵 / 리스트 / 스칼라, 들여쓰기는 스페이스.
+#  따옴표 선택, # 주석(줄 전체 또는 값 뒤 " # "), yes/no → bool, 정수 → number.
+#  미지원: flow 문법([a, b] / {k: v}), 멀티라인(| >), 앵커. 오류 시 배포 중단 + Actions 로그에 파일:줄.
+# ─────────────────────────────────────────────────────────────────────────
+#
+# ▶ 빠진 과거 논문 추가
+#   1. 아래 예시 블록을 파일 아무 곳에나 추가 (순서 무관).
+#   2. 해당 없는 칸은 비워둠.
+#   3. 정렬은 site.js 가 date 기준으로 처리 (Home·Publications·Research).
+#
+# - title: Paper Title
+#   authors: First Author, Second Author, and Sukyoung Ryu
+#   venue: PACMPL OOPSLA 2027
+#   date: October 2027
+#   link: https://doi.org/10.1145/...
+#   award:
+#   research:
+#
+# 칸 설명
+#   date      월 + 연도 (October 2027). 아직 미정이면 "To appear 2027"
+#   link      논문 링크. 없으면 비워두기
+#   award     수상 이름 (예: ACM SIGSOFT Distinguished Paper Award). 없으면 비워두기
+#   research  Research 페이지의 어느 분야 아래에 띄울지 (화면에는 안 보이는 표시용 칸)
+#             비워두면 Research 페이지에는 안 나옴. 두 분야: "rust, analysis"
+#             쓸 수 있는 id (data/settings.yml → research → areas):
+#               spec       Mechanized Specifications and Language Testing
+#               rust       Automatic C-to-Rust Translation
+#               analysis   Program Analysis and Type Systems
+#               quantum    Quantum and Probabilistic Programming
+#   short     (선택) research 를 쓸 때 Research 페이지 괄호 안 짧은 학회명 (예: OOPSLA 2027). 없으면 venue 사용
+#   section   (선택, 드묾) Technical Reports / Refereed Articles / Refereed Chapters in Books — 맨 아래 별도 섹션
+
+
+- title: WEST: Specification-Based Test Generation for WebAssembly
+  authors: Dongjun Youn, Wonho Shin, and Sukyoung Ryu
+  venue: ASE 2025
+  date: November 2025
+  link: https://doi.org/10.1109/ASE63991.2025.00119
+  award: ACM SIGSOFT Distinguished Paper Award
+  research: spec
+  short: ASE 2025
+
+- title: Exact Inference for Quantum Circuits: A Testing Oracle for Quantum Software Stacks
+  authors: Kanguk Lee, Jaemin Hong, and Sukyoung Ryu
+  venue: ASE 2025
+  date: November 2025
+  link: https://doi.org/10.1109/ASE63991.2025.00203
+  award:
+  research: quantum
+  short: ASE 2025
+
+- title: Forcrat: Automatic I/O API Translation from C to Rust via Origin and Capability Analysis
+  authors: Jaemin Hong and Sukyoung Ryu
+  venue: ASE 2025
+  date: November 2025
+  link: https://doi.org/10.1109/ASE63991.2025.00130
+  award:
+  research:
+
+- title: Execution-Aware Program Reduction for WebAssembly via Record and Replay
+  authors: Doehyun Baek, Daniel Lehmann, Ben L. Titzer, Sukyoung Ryu, and Michael Pradel
+  venue: ASE 2025
+  date: November 2025
+  link: https://doi.org/10.1109/ASE63991.2025.00073
+  award:
+  research:
+
+- title: Automatically Translating C to Rust
+  authors: Jaemin Hong and Sukyoung Ryu
+  venue: Communications of the ACM, Vol. 68, No. 11
+  date: November 2025
+  link: https://cacm.acm.org/research/automatically-translating-c-to-rust/
+  award:
+  research: rust
+  short: CACM 2025
+
+- title: Bridging the Gap between Real-World and Formal Binary Lifting through Filtered-Simulation
+  authors: Jihee Park, Insu Yun, and Sukyoung Ryu
+  venue: PACMPL OOPSLA 2025
+  date: October 2025
+  link: https://doi.org/10.1145/3720524
+  award:
+  research: analysis
+  short: OOPSLA 2025
+
+- title: Mechanizing the P4 Language Specification with P4-SpecTec
+  authors: Jaehyun Lee, Seokhun Jeong, and Sukyoung Ryu
+  venue: P4 Developer Days
+  date: September 2025
+  link: https://p4.org/event/p4-developer-days-mechanizing-the-p4-language-specification-with-p4-spectec/
+  award:
+  research:
+
+- title: Programming Language Research for Technical and Social Good: What PL Can Do for Good?
+  authors: Sukyoung Ryu
+  venue: PLDI 2025 Keynote
+  date: June 2025
+  link: https://www.youtube.com/watch?v=SNRLoOd9a6w
+  award:
+  research:
+
+- title: Automated Code Transformation for Distributed Training of TensorFlow Deep Learning Models
+  authors: Yusung Sim, Wonho Shin, and Sungho Lee
+  venue: Science of Computer Programming, Vol. 242
+  date: May 2025
+  link: https://doi.org/10.1016/j.scico.2024.103260
+  award:
+  research:
+
+- title: Type-Migrating C-to-Rust Translation using a Large Language Model
+  authors: Jaemin Hong and Sukyoung Ryu
+  venue: Empirical Software Engineering, Vol. 30
+  date: 2025
+  link: https://doi.org/10.1007/s10664-024-10573-2
+  award:
+  research: rust
+  short: EMSE 2025
+
+- title: Taming Shared Mutable States of Operating Systems in Rust
+  authors: Jaemin Hong, Sunghwan Shim, Sanguk Park, Tae Woo Kim, Jungwoo Kim, Junsoo Lee, Sukyoung Ryu, and Jeehoon Kang
+  venue: Science of Computer Programming, Vol. 238
+  date: December 2024
+  link: https://doi.org/10.1016/j.scico.2024.103152
+  award:
+  research:
+
+- title: To Tag, or Not to Tag: Translating C's Unions to Rust's Tagged Unions
+  authors: Jaemin Hong and Sukyoung Ryu
+  venue: ASE 2024
+  date: October 2024
+  link: https://doi.org/10.1145/3691620.3694985
+  award:
+  research:
+
+- title: Wasm-R3: Record-Reduce-Replay for Realistic and Standalone WebAssembly Benchmarks
+  authors: Doehyun Baek*, Jakob Getz*, Yusung Sim, Daniel Lehmann, Ben Titzer, Sukyoung Ryu, and Michael Pradel
+  venue: PACMPL OOPSLA 2024
+  date: October 2024
+  link: https://doi.org/10.1145/3689787
+  award:
+  research:
+
+- title: P4-SpecTec: Mechanized Language Definition for P4
+  authors: Jaehyun Lee, Yechan Woo, Nate Foster, and Sukyoung Ryu
+  venue: P4 Workshop 2024
+  date: October 2024
+  link: https://www.youtube.com/watch?v=AcxAYvM8pnA
+  award:
+  research:
+
+- title: How to design, document, and implement programming languages
+  authors: Sukyoung Ryu
+  venue: CS Colloquium, Cornell University
+  date: August 2024
+  link: https://vod.video.cornell.edu/media/CS+Fall+2024+Colloquium-+Sukyoung+Ryu/1_d8x24bcp/352086902
+  award:
+  research:
+
+- title: Don't Write, but Return: Replacing Output Parameters with Algebraic Data Types in C-to-Rust Translation
+  authors: Jaemin Hong and Sukyoung Ryu
+  venue: PLDI 2024
+  date: June 2024
+  link: https://doi.org/10.1145/3656406
+  award:
+  research: rust
+  short: PLDI 2024
+
+- title: Bringing the WebAssembly Standard up to Speed with SpecTec
+  authors: Dongjun Youn, Wonho Shin, Jaehyun Lee, Sukyoung Ryu, Joachim Breitner, Philippa Gardner, Sam Lindley, Matija Pretnar, Xiaojia Rao, Conrad Watt, and Andreas Rossberg
+  venue: PLDI 2024
+  date: June 2024
+  link: https://doi.org/10.1145/3656440
+  award:
+  research: spec
+  short: PLDI 2024
+
+- title: JavaScript Language Design and Implementation in Tandem
+  authors: Sukyoung Ryu and Jihyeok Park
+  venue: Communications of the ACM, Vol. 67, No. 5
+  date: May 2024
+  link: https://cacm.acm.org/research/javascript-language-design-and-implementation-in-tandem/
+  award:
+  research: spec
+  short: CACM 2024
+
+- title: An Empirical Study of JVMs' Behaviors on Erroneous JNI Interoperations
+  authors: Sungjae Hwang, Sungho Lee, and Sukyoung Ryu
+  venue: IEEE TSE, Vol. 50, No. 4
+  date: April 2024
+  link: https://ieeexplore.ieee.org/document/10460136
+  award:
+  research:
+
+- title: Declarative Static Analysis for Multilingual Programs using CodeQL
+  authors: Dongjun Youn, Sungho Lee, and Sukyoung Ryu
+  venue: Software: Practice and Experience, Vol. 53, Issue 7
+  date: July 2023
+  link: https://doi.org/10.1002/spe.3199
+  award:
+  research: analysis
+  short: SPE 2023
+
+- title: Feature-Sensitive Coverage for Conformance Testing of Programming Language Implementations
+  authors: Jihyeok Park, Dongjun Youn, Kanguk Lee, and Sukyoung Ryu
+  venue: PLDI 2023
+  date: June 2023
+  link: https://doi.org/10.1145/3591240
+  award:
+  research:
+
+- title: Long-Term Mentoring for Computer Science Researchers
+  authors: Emily Ruppel, Sihang Liu, Elba Garza, Sukyoung Ryu, Alexandra Silva, and Talia Ringer
+  venue: Communications of the ACM, Vol. 66, No. 5
+  date: May 2023
+  link: https://doi.org/10.1145/3564287
+  award:
+  research:
+
+- title: Static Analysis of JNI Programs via Binary Decompilation
+  authors: Jihee Park*, Sungho Lee*, Jaemin Hong, and Sukyoung Ryu
+  venue: IEEE TSE, Vol. 49, No. 5
+  date: May 2023
+  link: https://ieeexplore.ieee.org/document/10035436
+  award:
+  research:
+
+- title: Improving Automatic C-to-Rust Translation with Static Analysis
+  authors: Jaemin Hong
+  venue: ICSE 2023 Doctoral Symposium
+  date: May 2023
+  link: https://doi.org/10.1109/ICSE-Companion58688.2023.00074
+  award:
+  research:
+
+- title: Concrat: An Automatic C-to-Rust Lock API Translator for Concurrent Programs
+  authors: Jaemin Hong and Sukyoung Ryu
+  venue: ICSE 2023
+  date: May 2023
+  link: https://doi.org/10.1109/ICSE48619.2023.00069
+  award:
+  research:
+
+- title: Semantic Transformation Framework for Rewriting Rules
+  authors: Jihee Park, Jaemin Hong, and Sukyoung Ryu
+  venue: PEPM 2023
+  date: January 2023
+  link: https://doi.org/10.1145/3571786.3573016
+  award:
+  research:
+
+- title: Automatically Deriving JavaScript Static Analyzers from Specifications using Meta-Level Static Analysis
+  authors: Jihyeok Park, Seungmin An, and Sukyoung Ryu
+  venue: ESEC/FSE 2022
+  date: November 2022
+  link: https://doi.org/10.1145/3540250.3549097
+  award:
+  research:
+
+- title: Filling the gap between the JavaScript language specification and tools using the JISET family
+  authors: Sukyoung Ryu, Jihyeok Park, and Seungmin An
+  venue: PLDI 2022 Tutorial
+  date: June 2022
+  link: https://pldi22.sigplan.org/details/pldi-2022-tutorials/1/Filling-the-gap-between-the-JavaScript-language-specification-and-tools-using-the-JIS
+  award:
+  research:
+
+- title: JSTAR: JavaScript Specification Type Analyzer using Refinement
+  authors: Jihyeok Park, Seungmin An, Wonho Shin, Yusung Sim, and Sukyoung Ryu
+  venue: ASE 2021
+  date: November 2021
+  link: https://doi.org/10.1109/ASE51524.2021.9678781
+  award:
+  research:
+
+- title: Accelerating JavaScript Static Analysis via Dynamic Shortcuts
+  authors: Joonyoung Park*, Jihyeok Park*, Dongjun Youn, and Sukyoung Ryu
+  venue: ESEC/FSE 2021
+  date: August 2021
+  link: https://doi.org/10.1145/3468264.3468556
+  award:
+  research:
+
+- title: JavaScript Static Analysis with Evolving Engines and Specification
+  authors: Jihyeok Park
+  venue: ECOOP/ISSTA 2021 Doctoral Symposium
+  date: July 2021
+  link: https://conf.researchr.org/details/issta-2021/ecoop-issta-2021-doctoral-symposium/4/JavaScript-Static-Analysis-with-Evolving-Engines-and-Specification-Senior-Presentati
+  award:
+  research:
+
+- title: A Survey of Parametric Static Analysis
+  authors: Jihyeok Park*, Hongki Lee*, and Sukyoung Ryu
+  venue: ACM Computing Surveys, Vol. 54, Issue 7
+  date: July 2021
+  link: https://doi.org/10.1145/3464457
+  award:
+  research: analysis
+  short: CSUR 2021
+
+- title: JEST: N+1-version Differential Testing of Both JavaScript Engines and Specification
+  authors: Jihyeok Park, Seungmin An, Dongjun Youn, Gyeongwon Kim, and Sukyoung Ryu
+  venue: ICSE 2021
+  date: May 2021
+  link: https://ieeexplore.ieee.org/abstract/document/9402086
+  award: ACM SIGSOFT Distinguished Paper Award
+  research: spec
+  short: ICSE 2021
+
+- title: JUSTGen: Effective Test Generation for Unspecified JNI Behaviors on JVMs
+  authors: Sungjae Hwang, Sungho Lee, Jihoon Kim, and Sukyoung Ryu
+  venue: ICSE 2021
+  date: May 2021
+  link: https://ieeexplore.ieee.org/abstract/document/9402099
+  award:
+  research:
+
+- title: JISET: JavaScript IR-based Semantics Extraction Toolchain
+  authors: Jihyeok Park, Jihee Park, Seungmin An, and Sukyoung Ryu
+  venue: ASE 2020
+  date: September 2020
+  link: https://doi.org/10.1145/3324884.3416632
+  award:
+  research:
+
+- title: Broadening Horizons of Multilingual Static Analysis: Semantic Summary Extraction from C Code for JNI Program Analysis
+  authors: Sungho Lee, Hyogun Lee, and Sukyoung Ryu
+  venue: ASE 2020
+  date: September 2020
+  link: https://doi.org/10.1145/3324884.3416558
+  award: ACM SIGSOFT Distinguished Paper Award
+  research: analysis
+  short: ASE 2020
+
+- title: Analysis of Blockchain Smart Contracts: Techniques and Insights
+  authors: Shinhae Kim and Sukyoung Ryu
+  venue: IEEE SecDev 2020
+  date: September 2020
+  link: https://drive.google.com/file/d/1P4tqRdrp9gkq4VC7MJo-EQpsyOYq2-qt/view?usp=sharing
+  award:
+  research:
+
+- title: Gap between Theory and Practice: An Empirical Study of Security Patches in Solidity
+  authors: Sungjae Hwang and Sukyoung Ryu
+  venue: ICSE 2020
+  date: July 2020
+  link: https://drive.google.com/file/d/1cwLc6xDWC63jiqlXnFipfqW1R6t0p-Py/view?usp=sharing
+  award:
+  research:
+
+- title: All about Activity Injection: Threats, Semantics, Detection, and Defense
+  authors: Sungjae Hwang, Sungho Lee, and Sukyoung Ryu
+  venue: Software: Practice and Experience, Vol. 50, Issue 7
+  date: July 2020
+  link: https://doi.org/10.1002/spe.2792
+  award:
+  research:
+
+- title: Automatically Tracing Imprecision Causes in JavaScript Static Analysis
+  authors: Hongki Lee, Changhee Park, and Sukyoung Ryu
+  venue: The Art, Science, and Engineering of Programming, Vol. 4, Issue 2
+  date: March 2020
+  link: https://doi.org/10.22152/programming-journal.org/2020/4/2
+  award:
+  research:
+
+- title: Adlib: Analyzer for Mobile Ad Platform Libraries
+  authors: Sungho Lee and Sukyoung Ryu
+  venue: ISSTA 2019
+  date: July 2019
+  link: https://drive.google.com/uc?export=download&id=1PIy_FZ8YW9w5Fkt8h_h8oEDW80DV4duz
+  award:
+  research:
+
+- title: JNI Program Analysis with Automatically Extracted C Semantic Summary
+  authors: Sungho Lee
+  venue: ISSTA 2019 Doctoral Symposium
+  date: July 2019
+  link: https://drive.google.com/uc?export=download&id=1mDihiV9bXJMnSSeIFofttjnPeUUQPe9V
+  award:
+  research:
+
+- title: Towards Analysis and Bug Finding of JavaScript Web Applications in the Wild
+  authors: Sukyoung Ryu, Jihyeok Park, and Joonyoung Park
+  venue: IEEE Software, Vol. 36, Issue 3
+  date: May 2019
+  link: https://drive.google.com/uc?export=download&id=1IJkmJ4Q5Qvq2N5Pc4OG3ZRBB3EBjBqfd
+  award:
+  research:
+
+- title: Towards Understanding and Reasoning about Android Interoperations
+  authors: Sora Bae, Sungho Lee, and Sukyoung Ryu
+  venue: ICSE 2019
+  date: May 2019
+  link: https://drive.google.com/uc?export=download&id=1WBcvO7QsJxv1Epm9UBIEqEyXkegwrQlT
+  award:
+  research:
+
+- title: Weakly Sensitive Analysis for JavaScript Object-Manipulating Programs
+  authors: Yoonseok Ko, Xavier Rival, and Sukyoung Ryu
+  venue: Software: Practice and Experience, Vol. 49, Issue 5
+  date: May 2019
+  link: https://doi.org/10.1002/spe.2676
+  award:
+  research:
+
+- title: Retinal Blood Vessel Caliber Estimation for Optical Coherence Tomography Angiography Images Based on 3D Superellipsoid Modeling
+  authors: Myounghee Han, Yongjoo Kim, Jang Ryul Park, Benjamin J. Vakoc, Wang-Yuhl Oh, and Sukyoung Ryu
+  venue: International Journal of Image and Graphics, Vol. 19, Issue 2
+  date: May 2019
+  link: https://doi.org/10.1142/S0219467819500116
+  award:
+  research:
+
+- title: Automatic Modeling of Opaque Code for JavaScript Static Analysis
+  authors: Joonyoung Park, Alexander Jordan, and Sukyoung Ryu
+  venue: FASE 2019
+  date: April 2019
+  link: https://drive.google.com/uc?export=download&id=1R1wDBYILqw8-ZDfe0ZxIz1lmloclEYta
+  award:
+  research:
+
+- title: Polymorphic Symmetric Multiple Dispatch with Variance
+  authors: Gyunghee Park, Jaemin Hong, Guy L. Steele Jr., and Sukyoung Ryu
+  venue: POPL 2019
+  date: January 2019
+  link: https://drive.google.com/uc?export=download&id=1QVKpg5tmD25rWkj9JOBnQF_aaJU2djMR
+  award:
+  research: analysis
+  short: POPL 2019
+
+- title: Path Dependent Types with Path-Equality
+  authors: Jaemin Hong, Jihyeok Park, and Sukyoung Ryu
+  venue: Scala Symposium 2018
+  date: September 2018
+  link: https://drive.google.com/uc?export=download&id=1AmaDCwAiiqe5eaBwktP3IqBcXSqzRkdC
+  award:
+  research:
+
+- title: A Theoretical Foundation of Sensitivity in an Abstract Interpretation Framework
+  authors: Se-won Kim, Xavier Rival, and Sukyoung Ryu
+  venue: ACM TOPLAS, Vol. 40, Issue 3
+  date: August 2018
+  link: https://doi.org/10.1145/3230624
+  award:
+  research: analysis
+  short: TOPLAS 2018
+
+- title: Wide Dynamic Range High-speed Three-dimensional Quantitative OCT Angiography with Hybrid-beam Scan
+  authors: Taejin Park, Sun-Joo Jang, Myounghee Han, Sukyoung Ryu, and Wang-Yuhl Oh
+  venue: Optics Letters, Vol. 43, Issue 10
+  date: May 2018
+  link: https://doi.org/10.1364/OL.43.002237
+  award:
+  research:
+
+- title: Static Analysis of JavaScript Libraries in a Scalable and Precise Way Using Loop-Sensitivity
+  authors: Changhee Park, Hongki Lee, and Sukyoung Ryu
+  venue: Software: Practice and Experience, Vol. 48, Issue 4
+  date: April 2018
+  link: https://doi.org/10.1002/spe.2552
+  award:
+  research:
+
+- title: Static Analysis of Android Applications for Finding Bugs and Security Vulnerabilities
+  authors: Sukyoung Ryu
+  venue: Keynote, <Programming> 2018
+  date: April 2018
+  link:
+  award:
+  research:
+
+- title: A Framework for Dynamic Inter-Device Task Dispatch with Eventual Consistency
+  authors: Jihyeok Park, Joonyoung Park, Yoonkyong Lee, Chul-Joo Kim, Byoungoh Kim, and Sukyoung Ryu
+  venue: ProWeb 2018
+  date: April 2018
+  link: https://drive.google.com/uc?export=download&id=1KHYj7AZB4kouCc8fJE0EItE6HbrhEFLK
+  award:
+  research:
+
+- title: EventHandler-based Analysis Framework for Web Apps using Dynamically Collected States
+  authors: Joonyoung Park, Kwangwon Sun, and Sukyoung Ryu
+  venue: FASE 2018
+  date: April 2018
+  link: https://drive.google.com/uc?export=download&id=12oyQRRNfcbcww3K2lU81WpgL7RmiuCqg
+  award:
+  research:
+
+- title: Automatic Detection of Visibility Faults by Layout Changes in HTML5 Web Pages
+  authors: Yeonhee Ryou and Sukyoung Ryu
+  venue: ICST 2018
+  date: April 2018
+  link: https://drive.google.com/uc?export=download&id=1_5Bpz7P4aP8IkasVozdg4nn71llH5aL9
+  award:
+  research:
+
+- title: All about Activity Injection: Threats, Semantics, and Detection
+  authors: Sungho Lee, Sungjae Hwang, and Sukyoung Ryu
+  venue: ASE 2017
+  date: November 2017
+  link: https://drive.google.com/uc?export=download&id=1cAaM76QUSlByDkx72FpORfHlm3P42P3V
+  award:
+  research:
+
+- title: Weakly Sensitive Analysis for Unbounded Iteration over JavaScript Objects
+  authors: Yoonseok Ko, Xavier Rival, and Sukyoung Ryu
+  venue: APLAS 2017
+  date: November 2017
+  link: https://drive.google.com/uc?export=download&id=1VP8-rR22svj_q-0KBqeF-gKkKNsssnS4
+  award:
+  research:
+
+- title: Analysis of JavaScript Programs: Challenges and Research Trends
+  authors: Kwangwon Sun and Sukyoung Ryu
+  venue: ACM Computing Surveys, Vol. 50, Issue 4
+  date: November 2017
+  link: https://doi.org/10.1145/3106741
+  award:
+  research:
+
+- title: Toward Building Memory-safe Network Functions with Modest Performance Overhead
+  authors: Keunhong Lee, Shinae Woo, Sanghyeon Seo, Jihyeok Park, Sukyoung Ryu, and Sue Moon
+  venue: NetPL 2017
+  date: August 2017
+  link: https://drive.google.com/uc?export=download&id=1qTZkO9GotMrgYd7XthjErxlVratk-7J0
+  award:
+  research:
+
+- title: Bug Detection in JavaScript Web Apps using the SAFE Framework
+  authors: Sukyoung Ryu, Alexander Jordan, and Dongsun Kim
+  venue: PLDI 2017 Tutorial
+  date: June 2017
+  link: https://drive.google.com/uc?export=download&id=1Ky6SptzB_9dFaSkqOoAea3VjUsuTZDqP
+  award:
+  research:
+
+- title: Revisiting Recency Abstraction for JavaScript: Towards an Intuitive, Compositional, and Efficient Heap Abstraction
+  authors: Jihyeok Park, Xavier Rival, and Sukyoung Ryu
+  venue: SOAP 2017
+  date: June 2017
+  link: https://drive.google.com/uc?export=download&id=1k3MdYHGPFGtWYYTB2q9j0Tl7gpaxRYww
+  award: Best Paper Award
+  research:
+
+- title: Partition-based Coverage Metrics and Type-guided Search in Concolic Testing for JavaScript Applications
+  authors: Sora Bae, Joonyoung Park, and Sukyoung Ryu
+  venue: FormaliSE 2017
+  date: May 2017
+  link: https://drive.google.com/uc?export=download&id=1D-neZBbg2v1C4nk-hA8N52ghaI30_0Xe
+  award:
+  research:
+
+- title: Analysis of JavaScript Web Applications Using SAFE 2.0
+  authors: Jihyeok Park, Yeonhee Ryou, Joonyoung Park, and Sukyoung Ryu
+  venue: ICSE 2017 Demonstrations
+  date: May 2017
+  link: https://drive.google.com/uc?export=download&id=1NNVlrfscAIcvyEuKuHLqEe7lwvw_p5p-
+  award:
+  research:
+
+- title: Precise and Scalable Static Analysis of jQuery Using a Regular Expression Domain
+  authors: Changhee Park, Hyeonseung Im, and Sukyoung Ryu
+  venue: DLS 2016
+  date: October 2016
+  link: https://drive.google.com/uc?export=download&id=1ByvqXj1GQzUUmWofrI-SCi8kJ73ooOY6
+  award:
+  research:
+
+- title: Journey to Find Bugs in JavaScript Web Applications in the Wild
+  authors: Sukyoung Ryu
+  venue: ICFP 2016 Keynote
+  date: September 2016
+  link: https://www.youtube.com/watch?v=gEU9utf0sxE
+  award:
+  research:
+
+- title: Scalable Framework for Parsing: from Fortress to JavaScript
+  authors: Sukyoung Ryu
+  venue: Software: Practice and Experience, Vol. 46, Issue 9
+  date: September 2016
+  link: https://doi.org/10.1002/spe.2380
+  award:
+  research:
+
+- title: HybriDroid: Static Analysis Framework for Android Hybrid Applications
+  authors: Sungho Lee, Julian Dolby, and Sukyoung Ryu
+  venue: ASE 2016
+  date: September 2016
+  link: https://drive.google.com/uc?export=download&id=1x3n3tGkzxBsvvt-9fmeTGKfC9TEICG7X
+  award:
+  research:
+
+- title: ThisType for Object-Oriented Languages: From Theory to Practice
+  authors: Sukyoung Ryu
+  venue: ACM TOPLAS, Vol. 38, Issue 3
+  date: May 2016
+  link: https://doi.org/10.1145/2888392
+  award:
+  research:
+
+- title: Battles with False Positives in Static Analysis of JavaScript Web Applications in the Wild
+  authors: Joonyoung Park, Inho Lim, and Sukyoung Ryu
+  venue: ICSE 2016 SEIP
+  date: May 2016
+  link: https://drive.google.com/uc?export=download&id=1lrxffoPpOCfOpuTr75E9h7YSz5aDuX3f
+  award:
+  research:
+
+- title: Development Nature Matters: An Empirical Study of Code Clones in JavaScript Applications
+  authors: Wai Ting Cheung, Sukyoung Ryu, and Sunghun Kim
+  venue: Empirical Software Engineering, Vol. 21, No. 2
+  date: April 2016
+  link: https://doi.org/10.1007/s10664-015-9368-6
+  award:
+  research:
+
+- title: Static Analysis of JavaScript Web Applications in the Wild via Practical DOM Modeling
+  authors: Changhee Park, Sooncheol Won, Joonho Jin, and Sukyoung Ryu
+  venue: ASE 2015
+  date: November 2015
+  link: https://drive.google.com/uc?export=download&id=1dHewF1m7CdtVnHn8e076YsWbu8RwhAgv
+  award:
+  research:
+
+- title: Practically Tunable Static Analysis Framework for Large-Scale JavaScript Applications
+  authors: Yoonseok Ko, Hongki Lee, Julian Dolby, and Sukyoung Ryu
+  venue: ASE 2015
+  date: November 2015
+  link: https://drive.google.com/uc?export=download&id=1_NhXgVAtT97OSshWOKIeUJqqGPNf283G
+  award:
+  research:
+
+- title: Scalable and Precise Static Analysis of JavaScript Applications via Loop-Sensitivity
+  authors: Changhee Park and Sukyoung Ryu
+  venue: ECOOP 2015
+  date: July 2015
+  link: https://drive.google.com/uc?export=download&id=1m3e9WWqUt-8wkTN0_Yasmxen5vo5_Era
+  award: Best Artifact Award
+  research:
+
+- title: GPU-accelerated Framework for Intracoronary Optical Coherence Tomography Imaging at the Push of a Button
+  authors: Myounghee Han, Kyunghun Kim, Sun-Joo Jang, Han Saem Cho, Brett E. Bouma, Wang-Yuhl Oh, and Sukyoung Ryu
+  venue: PLOS ONE, Vol. 10, No. 4
+  date: April 2015
+  link: https://doi.org/10.1371/journal.pone.0124192
+  award:
+  research:
+
+- title: Bittersweet ADB: Attacks and Defenses
+  authors: Sungjae Hwang, Sungho Lee, Yongdae Kim, and Sukyoung Ryu
+  venue: ASIACCS 2015
+  date: April 2015
+  link: https://drive.google.com/uc?export=download&id=1U7KPZi9YjmuYJtsJzl1uypkZXCZKIZeC
+  award:
+  research:
+
+- title: Inferring Grammatical Summaries of String Values
+  authors: Se-Won Kim, Wooyoung Chin, Jimin Park, Jeongmin Kim, and Sukyoung Ryu
+  venue: APLAS 2014
+  date: November 2014
+  link: https://drive.google.com/uc?export=download&id=1-ObJCA8X_xjZzSpdbqmRcicY3X7y8JM_
+  award:
+  research:
+
+- title: SAFE_WAPI: Web API Misuse Detector for Web Applications
+  authors: SungGyeong Bae, Hyunghun Cho, Inho Lim, and Sukyoung Ryu
+  venue: FSE 2014
+  date: November 2014
+  link: https://drive.google.com/uc?export=download&id=1oR1krViZwmtw0dFtcVgU2tJ6bf7p1L_o
+  award:
+  research:
+
+- title: A New Formalization of Subtyping to Match Subclasses to Subtypes
+  authors: Hyunik Na and Sukyoung Ryu
+  venue: FLOPS 2014
+  date: June 2014
+  link: https://drive.google.com/uc?export=download&id=1p63xac94Z61jBvnhVIJy4ztFdFtuvETg
+  award:
+  research:
+
+- title: Concolic Testing with Static Analysis for JavaScript Applications
+  authors: Sora Bae
+  venue: Modularity 2014
+  date: April 2014
+  link: https://drive.google.com/uc?export=download&id=1Q_hmbOe6Am1BlugDm4V-WT5jw7qthQ0y
+  award: ACM Student Research Competition 2nd
+  research:
+
+- title: JavaScript API Misuse Detection by Using TypeScript
+  authors: Jihyeok Park
+  venue: Modularity 2014
+  date: April 2014
+  link: https://drive.google.com/uc?export=download&id=12LXRKFtOvsppTtwMOkEMldKh-WqpjbRM
+  award: ACM Student Research Competition 3rd
+  research:
+
+- title: REST to JavaScript for Better Client-side Development
+  authors: Hyunghun Cho and Sukyoung Ryu
+  venue: WS-REST at WWW 2014
+  date: April 2014
+  link: https://drive.google.com/uc?export=download&id=1PE0uQ9pu17qb1KQtNdT0jX3UB2pGI616
+  award:
+  research:
+
+- title: JavaScript Module System: Exploring the Design Space
+  authors: Junhee Cho and Sukyoung Ryu
+  venue: Modularity 2014
+  date: April 2014
+  link: https://drive.google.com/uc?export=download&id=1klRTKepoSjRBXCQQPlIm7l3dRD0R8evq
+  award:
+  research:
+
+- title: Fine-Grained Function Visibility for Multiple Dispatch with Multiple Inheritance
+  authors: Jieung Kim, Sukyoung Ryu, Victor Luchangco, and Guy L. Steele Jr.
+  venue: APLAS 2013
+  date: December 2013
+  link: https://drive.google.com/uc?export=download&id=1bjdPk4FvsOj7zTeOEIgG5x59iX3Pr181
+  award:
+  research:
+
+- title: ThisJava: An Extension of Java with Recursive Types
+  authors: Hyunik Na and Sukyoung Ryu
+  venue: APLAS 2013
+  date: December 2013
+  link: https://drive.google.com/uc?export=download&id=1H0M_jOGUqd0lK46Y6SlznYNJLt84b7Hz
+  award:
+  research:
+
+- title: All about the ''with'' Statement in JavaScript: Removing ''with'' Statements in JavaScript Applications
+  authors: Changhee Park, Hongki Lee, and Sukyoung Ryu
+  venue: DLS 2013
+  date: October 2013
+  link: https://drive.google.com/uc?export=download&id=1X5e64l0sTo0vhm4M7hzuQiUW7RDxr3qU
+  award:
+  research:
+
+- title: Scalable Framework for Language Development: from Fortress to JavaScript
+  authors: Sukyoung Ryu
+  venue: Workshop on Scalable Language Specification
+  date: June 2013
+  link: https://drive.google.com/uc?export=download&id=1vVah4kpJX2kkW8-h2eIYljrDxOQEM8QC
+  award:
+  research:
+
+- title: Rewriting JavaScript Module System
+  authors: Junhee Cho
+  venue: AOSD 2013 Companion
+  date: March 2013
+  link: https://drive.google.com/uc?export=download&id=1e0d4uOxgpqI91g1yu4Oy448NI4IMnY9N
+  award: ACM Student Research Competition (Undergraduate) 1st
+  research:
+
+- title: High-Speed Automatic Segmentation of Intravascular Stent Struts in Optical Coherence Tomography Images
+  authors: Myounghee Han, Dongkwan Kim, Wang-Yuhl Oh, and Sukyoung Ryu
+  venue: Biomedical Optics, Photonics West 2013
+  date: February 2013
+  link: https://drive.google.com/uc?export=download&id=1FItRgiHfy17RAkEMWN5YyPh_otFY7OGu
+  award:
+  research:
+
+- title: High-Speed Automatic Segmentation of Intravascular Stent Struts in Optical Coherence Tomography Images
+  authors: Myounghee Han, Dongkwan Kim, Wang-Yuhl Oh, and Sukyoung Ryu
+  venue: International Forum on Medical Imaging in Asia 2012
+  date: November 2012
+  link: https://drive.google.com/uc?export=download&id=1EndxF2Dyyle4rGeC34Hx_YQ_USQTEWAl
+  award:
+  research:
+
+- title: Formal Specification of a JavaScript Module System
+  authors: Seonghoon Kang and Sukyoung Ryu
+  venue: OOPSLA 2012
+  date: October 2012
+  link: https://drive.google.com/uc?export=download&id=1HkDgoeY2urvjMyTjfudHCnWMQhuNm-qv
+  award:
+  research:
+
+- title: SAFE: Formal Specification and Implementation of a Scalable Analysis Framework for ECMAScript
+  authors: Hongki Lee, Sooncheol Won, Joonho Jin, Junhee Cho, and Sukyoung Ryu
+  venue: FOOL 2012
+  date: October 2012
+  link: https://drive.google.com/uc?export=download&id=13MesGAZQPcOVacaIaxkvUE8CSxHriQQv
+  award:
+  research:
+
+- title: Exact Type Parameterization and ThisType Support
+  authors: Hyunik Na, Sukyoung Ryu, and Kwangmoo Choe
+  venue: TLDI 2012
+  date: January 2012
+  link: https://drive.google.com/uc?export=download&id=1TB1Y8O5Qn_DL-RJVBcDugLKzxjntoJxs
+  award:
+  research:
+
+- title: Coq Mechanization of Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
+  authors: Jieung Kim and Sukyoung Ryu
+  venue: CPP 2011
+  date: December 2011
+  link: https://plrg.kaist.ac.kr/lib/exe/fetch.php?media=research:publications:cpp_paper.pdf
+  award:
+  research:
+
+- title: Type-Checking Modular Multiple Dispatch with Parametric Polymorphism and Multiple Inheritance
+  authors: Eric Allen, Justin Hilburn, Scott Kilpatrick, Victor Luchangco, Sukyoung Ryu, David Chase, and Guy L. Steele Jr.
+  venue: OOPSLA 2011
+  date: October 2011
+  link: https://drive.google.com/uc?export=download&id=1CaX6xUxmxlsGN_y_RNIaiQYKpXrPX8j6
+  award:
+  research:
+
+- title: An Empirical Study on the Rewritability of the with Statement in JavaScript
+  authors: Changhee Park, Hongki Lee, and Sukyoung Ryu
+  venue: FOOL 2011
+  date: October 2011
+  link: https://drive.google.com/uc?export=download&id=1WASlHOw9w6vh7-LFP2SCdO7PKXa2S96T
+  award:
+  research:
+
+- title: FortressCheck: Automatic Testing for Generic Properties
+  authors: Seonghoon Kang and Sukyoung Ryu
+  venue: SAC 2011
+  date: March 2011
+  link: https://drive.google.com/uc?export=download&id=1lZ_BMx7aScIAFjFKexND473jlkYV4BWH
+  award:
+  research:
+
+- title: Adding Pattern Matching to Existing Object-Oriented Languages
+  authors: Sukyoung Ryu, Changhee Park, and Guy L. Steele Jr.
+  venue: FOOL 2010
+  date: October 2010
+  link: https://drive.google.com/uc?export=download&id=1HZ3eVd7TCLpobxVuM8Medy8n-mGlhcy2
+  award:
+  research:
+
+- title: Integrating Coercion with Subtyping and Multiple Dispatch
+  authors: J.J. Hallett, Victor Luchangco, Sukyoung Ryu, and Guy L. Steele Jr.
+  venue: Science of Computer Programming, Vol. 75, No. 9
+  date: September 2010
+  link: https://drive.google.com/uc?export=download&id=1dFh8_UazRozzDYURQypuWvCJFAsqbhZE
+  award:
+  research:
+
+- title: Parsing Fortress Syntax
+  authors: Sukyoung Ryu
+  venue: PPPJ 2009
+  date: August 2009
+  link: https://drive.google.com/uc?export=download&id=1yXsK6YnkeFQtjqf1288kIgskFglnvtfG
+  award:
+  research:
+
+- title: Growing a Syntax
+  authors: Eric Allen, Ryan Culpepper, Janus Dam Nielsen, Jon Rafkind, and Sukyoung Ryu
+  venue: FOOL 2009
+  date: January 2009
+  link: https://drive.google.com/uc?export=download&id=1ba-YxSPmHH6gFIGVvXXyO7o0yVctjpfV
+  award:
+  research:
+
+- title: On Coercion for Object-Oriented Programming Languages
+  authors: J.J. Hallett, Victor Luchangco, Sukyoung Ryu, and Guy L. Steele Jr.
+  venue: SAC 2008
+  date: March 2008
+  link: https://drive.google.com/uc?export=download&id=16HwVN7ShR8rrypQYTMsoQj7Sk-aKvil9
+  award:
+  research:
+
+- title: Modular Multiple Dispatch with Multiple Inheritance
+  authors: Eric Allen, J.J. Hallett, Victor Luchangco, Sukyoung Ryu, and Guy L. Steele Jr.
+  venue: SAC 2007
+  date: March 2007
+  link: https://drive.google.com/uc?export=download&id=1ErSTxOsVxdN4cpspmVwUfc3qifWv-KvY
+  award:
+  research:
+
+- title: Source-level Debugging for Multiple Languages With Modest Programming Effort
+  authors: Sukyoung Ryu and Norman Ramsey
+  venue: CC 2005
+  date: April 2005
+  link: https://drive.google.com/uc?export=download&id=1wXZol1JtGDBHH3g9RJ8GwuqDS1XYg2mr
+  award:
+  research:
+
+- title: A Cost-effective Estimation of Uncaught Exceptions in SML Programs
+  authors: Kwangkeun Yi and Sukyoung Ryu
+  venue: Theoretical Computer Science, Vol. 277, No. 1-2 (invited paper)
+  date: April 2002
+  link: https://drive.google.com/uc?export=download&id=1CdkErBsUfJ2ZDJypwBadGSX7lI8HkbGs
+  award:
+  research:
+
+- title: Exception Analysis for Multithreaded Java Programs
+  authors: Sukyoung Ryu and Kwangkeun Yi
+  venue: APAQS 2001
+  date: December 2001
+  link: https://drive.google.com/uc?export=download&id=1rTKUQ9lT3zKyaSTC0ojDprMZNI8E90CX
+  award:
+  research:
+
+- title: Towards A Cost-effective Estimation of Uncaught Exceptions in SML Programs
+  authors: Kwangkeun Yi and Sukyoung Ryu
+  venue: SAS 1997, LNCS 1302
+  date: September 1997
+  link:
+  award:
+  research:
+
+- title: Estimating Uncaught Exceptions in Standard ML Programs from Type-based Equations
+  authors: Kwangkeun Yi, Sukyoung Ryu, and Ki-Hyun Pyun
+  venue: COMPSAC 1996
+  date: August 1996
+  link:
+  award:
+  research:
+
+- title: Implementing Hidden Type Variables in HTV1
+  authors: Joe Hallett, Eric Allen, and Sukyoung Ryu
+  venue: PLT Redex Chapter
+  date: August 2009
+  link: https://drive.google.com/uc?export=download&id=1Vkf9o3ty15ym1-kSOGMFEQTlw9cGXVSe
+  award:
+  research:
+  section: Refereed Chapters in Books
+
+- title: Project Fortress: A Multicore Language for Scientists and Engineers
+  authors: Sukyoung Ryu
+  venue: Grace Hopper Celebration of Women in Computing
+  date: October 2008
+  link:
+  award:
+  research:
+  section: Refereed Articles
+
+- title: Project Fortress: A Multicore Language for Multicore Processors
+  authors: Eric Allen, David Chase, Christine Flood, Victor Luchangco, Jan-Willem Maessen, Sukyoung Ryu, and Guy L. Steele Jr.
+  venue: Linux Magazine
+  date: September 2007
+  link:
+  award:
+  research:
+  section: Refereed Articles
+
+- title: JavaScript Module System: Exploring the Design Space (Extended with Formalization)
+  authors: Junhee Cho and Sukyoung Ryu
+  venue: Technical Report, KAIST
+  date: July 2013
+  link: https://drive.google.com/uc?export=download&id=1aCEJDJZZw6YcC48XpVioSVc_uTziGTK8
+  award:
+  research:
+  section: Technical Reports
+
+- title: A New Formalization of Subtyping to Match Subclasses to Subtypes
+  authors: Hyunik Na and Sukyoung Ryu
+  venue: Technical Report, KAIST
+  date: July 2013
+  link: https://drive.google.com/uc?export=download&id=11gvGEXLVmgzP5FfE-Z8HYjejkY9QW8t2
+  award:
+  research:
+  section: Technical Reports
+
+- title: All about the with Statement in JavaScript: Removing with Statements in JavaScript Applications
+  authors: Changhee Park, Hongki Lee, and Sukyoung Ryu
+  venue: Technical Report, KAIST
+  date: June 2013
+  link: https://drive.google.com/uc?export=download&id=14G-uWSsBB7kvsHHSj9efFalq21wRxlub
+  award:
+  research:
+  section: Technical Reports
+
+- title: MFFMM: Module Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
+  authors: Jieung Kim and Sukyoung Ryu
+  venue: Technical Report, KAIST
+  date: June 2013
+  link: https://drive.google.com/uc?export=download&id=1dqRpiXboH5KYIEn-YO9d0szYWnXYdw2Z
+  award:
+  research:
+  section: Technical Reports
+
+- title: Formal Specification of a JavaScript Module System
+  authors: Seonghoon Kang and Sukyoung Ryu
+  venue: Technical Report, KAIST
+  date: December 2011
+  link: https://drive.google.com/uc?export=download&id=1lb-R_ovOBw6N4k1aBovRy_QHL-W7G3xY
+  award:
+  research:
+  section: Technical Reports
+
+- title: Exact Type Parameterization and ThisType Support (Proofs)
+  authors: Hyunik Na, Sukyoung Ryu, and Kwangmoo Choe
+  venue: Technical Report, KAIST
+  date: October 2011
+  link: https://drive.google.com/uc?export=download&id=1jB-aWd14IBYPWHCHxNNcoSaqreZLh1bV
+  award:
+  research:
+  section: Technical Reports
+
+- title: FFMM: Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
+  authors: Jieung Kim and Sukyoung Ryu
+  venue: Technical Report, KAIST
+  date: June 2011
+  link: https://drive.google.com/uc?export=download&id=13hiQdxQvJ3yx1KMzuNeD3MJjdcIIOXvb
+  award:
+  research:
+  section: Technical Reports

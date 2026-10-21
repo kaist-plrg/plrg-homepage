@@ -1,0 +1,59 @@
+# ═════════════════════════════════════════════════════════════════════════
+#  사이트 설정 — Home 제목·소개 / 최신 논문 개수 / 연구 분야 / Publications 묶음 연도
+# ═════════════════════════════════════════════════════════════════════════
+# ─ 형식 ──────────────────────────────────────────────────────────────────
+#  YAML 서브셋 (site.js 내장 파서): 맵 / 리스트 / 스칼라, 들여쓰기는 스페이스.
+#  따옴표 선택, # 주석(줄 전체 또는 값 뒤 " # "), yes/no → bool, 정수 → number.
+#  미지원: flow 문법([a, b] / {k: v}), 멀티라인(| >), 앵커. 오류 시 배포 중단 + Actions 로그에 파일:줄.
+# ─────────────────────────────────────────────────────────────────────────
+#
+# ▶ 값만 바꾸면 됩니다. 글 안에서 **글자** = 주황색 강조, [보이는 글자](주소) = 링크.
+# ▶ 연구 분야 추가: research → areas 아래 블록(- id: ~ description:) 하나를 복사해서 붙이고
+#   id 를 새로 정합니다 (영문 소문자, 예: ai). 논문의 "research: ai" 로 그 분야에 논문을 띄웁니다.
+#   분야 순서 = 화면 순서 (Home 의 Research 목록과 Research 페이지 모두).
+
+
+# ── Home ─────────────────────────────────────────────
+home:
+  # 큰 제목. 한 줄 = 화면의 한 줄
+  headline:
+    - Designing, specifying, and analyzing
+    - real-world programming languages.
+  # 제목 아래 소개 문단
+  intro: PLRG is the **Programming Language Research Group** at KAIST School of Computing, led by Professor [Sukyoung Ryu](ryu.html). We develop programming language techniques and tools to help programmers build reliable software, connecting formal foundations with practical challenges in language specification, program analysis, software testing, and automatic program translation.
+  # Recent Publications 에 보여줄 최신 논문 개수 (research 와 상관없이 가장 최신 논문)
+  recent_publications: 5
+
+
+# ── Research ─────────────────────────────────────────
+research:
+  # Research 페이지 맨 위 소개 문단
+  intro: We develop programming language techniques and tools to help programmers build reliable software. Our research connects formal foundations with practical challenges in language specification, program analysis, software testing, and automatic program translation.
+  # 연구 분야. 순서 = 화면 순서 (Home의 Research 목록에도 같이 표시).
+  # 분야 추가: 블록 하나 복사 → id 를 새로 정하기. 논문의 "research: <id>" 에 이 id 를 쓰면 그 분야 아래에 표시.
+  areas:
+    - id: spec
+      title: Mechanized Specifications and Language Testing
+      keywords: JavaScript, WebAssembly, P4
+      description: We mechanize language specifications to generate tools and tests for real-world programming languages, including JavaScript, WebAssembly, and P4. Our techniques detect bugs and inconsistencies in language implementations.
+
+    - id: rust
+      title: Automatic C-to-Rust Translation
+      keywords: static analysis, program transformation, language models
+      description: We automate C-to-Rust translation using static analysis, program transformation, and language models. We aim to preserve program behavior while introducing safer, idiomatic Rust abstractions.
+
+    - id: analysis
+      title: Program Analysis and Type Systems
+      keywords: multilingual software, machine code, language implementations
+      description: We develop static analyses and type systems for reasoning about programs. Our work covers multilingual software, machine code, and the safety guarantees of language implementations.
+
+    - id: quantum
+      title: Quantum and Probabilistic Programming
+      keywords: quantum circuits, exact inference
+      description: We compile probabilistic programs into quantum circuits. We also develop exact inference techniques to test quantum software.
+
+
+# ── Publications ─────────────────────────────────────
+publications:
+  # 이 연도보다 이전 논문은 "Before 2020" 한 섹션으로 묶음
+  group_before: 2020

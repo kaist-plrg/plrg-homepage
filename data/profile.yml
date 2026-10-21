@@ -1,0 +1,91 @@
+# ═════════════════════════════════════════════════════════════════════════
+#  교수님 페이지 (ryu.html) — 상단 프로필 / Overview 탭 / Biography 탭
+#  (Photos 탭은 photos/gallery/ 폴더에 사진을 넣으면 자동)
+# ═════════════════════════════════════════════════════════════════════════
+# ─ 형식 ──────────────────────────────────────────────────────────────────
+#  YAML 서브셋 (site.js 내장 파서): 맵 / 리스트 / 스칼라, 들여쓰기는 스페이스.
+#  따옴표 선택, # 주석(줄 전체 또는 값 뒤 " # "), yes/no → bool, 정수 → number.
+#  미지원: flow 문법([a, b] / {k: v}), 멀티라인(| >), 앵커. 오류 시 배포 중단 + Actions 로그에 파일:줄.
+# ─────────────────────────────────────────────────────────────────────────
+#
+# ▶ 링크: [보이는 글자](https://주소) — 한 줄에 여러 개 가능
+#     - PLRG@KAIST Research Stories: Interviews (Korean) [44Bits](https://...) · [곽곽](https://...)
+#
+# ▶ 목록에 한 줄 추가 (수상·강연·활동 등): 해당 items: 아래에 "- ..." 한 줄. 위에 쓸수록 화면에서도 위.
+#
+# ▶ 새 섹션 추가: 아래 블록을 overview: 또는 biography: 안 원하는 위치에 붙이기
+#
+#   - heading: Selected Awards        (섹션 제목)
+#     items:                          (목록일 때)
+#       - First item, 2027
+#       - Second item [link](https://...)
+#
+#   - heading: About                  (문단일 때는 items 대신 text)
+#     text: One paragraph of text.
+#
+# ▶ 섹션 순서 = 화면 순서. 섹션 삭제는 "- heading:" 부터 다음 "- heading:" 전까지 지우기.
+
+
+# ── 상단 프로필 ──────────────────────────────────────
+name: Sukyoung Ryu
+# photos/ 폴더 안의 파일명
+photo: ryu.png
+position: Professor · [School of Computing](https://cs.kaist.ac.kr), [KAIST](https://www.kaist.ac.kr/en/)
+# 이름 아래 주황색 링크들
+links:
+  - [sryu.cs [at] kaist.ac.kr](mailto:sryu.cs@kaist.ac.kr)
+  - [GitHub](https://github.com/sukyoung)
+  - [YouTube](https://www.youtube.com/@SukyoungRyu)
+
+
+# ── Overview 탭
+overview:
+  - heading: Research
+    text: Programming languages, software engineering, information security, and quantum computing
+
+  - heading: Selected Activities
+    items:
+      - [ACM Conferences](https://conf.researchr.org/profile/sukyoungryu)
+      - [ACM SIGPLAN CARES](https://www.sigplan.org/Cares/)
+      - [ACM SIGPLAN Long-Term Mentoring Committee](https://www.sigplan.org/LongTermMentoring/)
+      - [KAIST Social Inclusion Committee](https://inclusion.kaist.ac.kr)
+
+  - heading: Selected Talks
+    items:
+      - Programming Language Research for Technical and Social Good: What PL Can Do for Good? [PLDI Keynote 2025](https://www.youtube.com/watch?v=SNRLoOd9a6w)
+      - How to Design, Document, and Implement Programming Languages [APLAS Keynote 2024](https://www.youtube.com/watch?v=rL3DWNdRoEc)
+      - PLRG@KAIST Research Stories: Interviews (Korean) [44Bits](https://www.youtube.com/watch?v=G3NeZAyiRqA) · [곽곽](https://www.youtube.com/watch?v=LJtffZLqi3k)
+      - [Let a Little Sun Shine in Your Heart](https://www.youtube.com/watch?v=tI3ttZQ1dgY) (Korean)
+
+  - heading: Selected Teaching
+    items:
+      - Programming Languages: [Coursera I](https://www.coursera.org/learn/programming-languages-1) · [Coursera II](https://www.coursera.org/learn/programming-languages2)
+      - [Tech for Impact](https://techforimpact.io/campus/info) (Korean)
+      - [Immersion Camp: Intensive Programming and Startup](https://madcamp.io) (Korean)
+
+  - heading: Summer Schools
+    items:
+      - Marktoberdorf Summer School [2026](https://sites.google.com/view/marktoberdorf2026)
+      - Programming Languages Implementation Summer School (PLISS) [2026](https://pliss.org/2026/index.html)
+      - Oregon Programming Languages Summer School (OPLSS) [2023](https://www.cs.uoregon.edu/research/summerschool/summer23/)
+
+# ── Biography 탭
+biography:
+  - heading: About
+    text: Sukyoung Ryu is a Professor in the School of Computing at KAIST. She earned her BS, MS, and Ph.D. in Computer Science from KAIST and worked at Sun Microsystems and Harvard University before joining KAIST. Her primary research interests include programming languages, software engineering, information security, and quantum computing. She received research awards from Google and Sun Microsystems, and Distinguished Paper Awards from ACM SIGSOFT. She has served as a Program Committee Chair and General Chair for conferences in the Programming Language and Software Engineering communities. She served as an associate editor of IEEE TSE and a member of ACM SIGPLAN EC, and she is currently a co-Chair of ACM SIGPLAN CARES.
+
+  - heading: Selected Honors
+    items:
+      - MSIT Leader Research Grant (KRW 800 million per year for up to nine years), 2026
+      - Deputy Prime Minister's Commendation, 2026
+      - KAIST ICT Endowed Chair Professor, 2026
+      - Top 100 National R&D Achievements, 2025
+      - Full Member of the National Academy of Engineering of Korea, 2025
+      - Lim Hyung-Kyu LINKGENESIS Best-Teacher Award, KAIST (Grand Prize), 2025
+      - Gaheon Academic Award, 2024
+      - ACM ICPC Coach Award, 2024
+      - Educator Award, KAIST, 2022
+      - Minister of Science and ICT Award, 2021
+      - Google ExploreCSR Award, 2020
+      - Excellence in Teaching Award, KAIST (Grand Prize), 2019
+      - Excellence in Teaching Award, KAIST 2017, 2012

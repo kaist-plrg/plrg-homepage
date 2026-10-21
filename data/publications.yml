@@ -1,0 +1,121 @@
+# ═════════════════════════════════════════════════════════════════════════
+#  논문 목록 — 2026년 ~       ★ 새 논문은 이 파일에 추가하세요 ★
+#  (2025년 이전 논문은 publications-until-2025.yml — 형식 동일)
+# ═════════════════════════════════════════════════════════════════════════
+# ─ 형식 ──────────────────────────────────────────────────────────────────
+#  YAML 서브셋 (site.js 내장 파서): 맵 / 리스트 / 스칼라, 들여쓰기는 스페이스.
+#  따옴표 선택, # 주석(줄 전체 또는 값 뒤 " # "), yes/no → bool, 정수 → number.
+#  미지원: flow 문법([a, b] / {k: v}), 멀티라인(| >), 앵커. 오류 시 배포 중단 + Actions 로그에 파일:줄.
+# ─────────────────────────────────────────────────────────────────────────
+#
+# ▶ 새 논문 추가
+#   1. 아래 예시 블록을 파일 아무 곳에나 추가 (순서 무관).
+#   2. 해당 없는 칸은 비워둠.
+#   3. 정렬은 site.js 가 date 기준으로 처리 (Home·Publications·Research).
+#
+# - title: Paper Title
+#   authors: First Author, Second Author, and Sukyoung Ryu
+#   venue: PACMPL OOPSLA 2027
+#   date: October 2027
+#   link: https://doi.org/10.1145/...
+#   award:
+#   research:
+#
+# 칸 설명
+#   date      월 + 연도 (October 2027). 아직 미정이면 "To appear 2027"
+#   link      논문 링크. 없으면 비워두기
+#   award     수상 이름 (예: ACM SIGSOFT Distinguished Paper Award). 없으면 비워두기
+#   research  Research 페이지의 어느 분야 아래에 띄울지 (화면에는 안 보이는 표시용 칸)
+#             비워두면 Research 페이지에는 안 나옴. 두 분야: "rust, analysis"
+#             쓸 수 있는 id (data/settings.yml → research → areas):
+#               spec       Mechanized Specifications and Language Testing
+#               rust       Automatic C-to-Rust Translation
+#               analysis   Program Analysis and Type Systems
+#               quantum    Quantum and Probabilistic Programming
+#   short     (선택) research 를 쓸 때 Research 페이지 괄호 안 짧은 학회명 (예: OOPSLA 2027). 없으면 venue 사용
+#   section   (선택, 드묾) Technical Reports / Refereed Articles / Refereed Chapters in Books — 맨 아래 별도 섹션
+
+
+- title: Replacing Output Parameters with Algebraic Data Types in C-to-Rust Translation
+  authors: Jaemin Hong, Hyunhee Kang, and Sukyoung Ryu
+  venue: ACM TOSEM
+  date: To appear 2026
+  link:
+  award:
+  research:
+
+- title: P4-SpecTec: Integrating a Language Mechanization Framework into the Real-World P4 Specification
+  authors: Jaehyun Lee, Seokhun Jeong, Sehyuk Ahn, Haechan Kwon, and Sukyoung Ryu
+  venue: PACMPL OOPSLA 2026
+  date: October 2026
+  link: https://doi.org/10.1145/3839535
+  award:
+  research: spec
+  short: OOPSLA 2026
+
+- title: Quantum Monte Carlo Estimation via Probabilistic Programming
+  authors: Seungmin Jeon, Jaeho Choi, Jonguk Jeon, Kanguk Lee, Kyeongmin Cho, Sukyoung Ryu, and Jeehoon Kang
+  venue: PACMPL OOPSLA 2026
+  date: October 2026
+  link: https://doi.org/10.1145/3839463
+  award:
+  research: quantum
+  short: OOPSLA 2026
+
+- title: SpecTrum: Specification-Guided Differential Fuzzing for Ethereum Consensus Clients
+  authors: Seokhun Jeong, Gyeongmin Dan, Sukyoung Ryu, and Sungjae Hwang
+  venue: ASE 2026
+  date: October 2026
+  link: https://doi.org/10.1145/3832783.3834406
+  award:
+  research:
+
+- title: Rust's Type Checker Implementation is Unsound: An Empirical Study on Soundness Bugs in rustc
+  authors: Yusung Sim, Sukyoung Ryu, and Jaemin Hong
+  venue: ISSTA 2026
+  date: October 2026
+  link: https://doi.org/10.1145/3832220
+  award:
+  research: analysis
+  short: ISSTA 2026
+
+- title: Securing Union-Based Type Punning in C-to-Rust Translation
+  authors: Eunsu Kim, Sukyoung Ryu, and Jaemin Hong
+  venue: IEEE Security & Privacy
+  date: July 2026
+  link: https://ieeexplore.ieee.org/document/11616560
+  award:
+  research:
+
+- title: PROCTOR: An Extensible C-to-Rust Translation Framework with Static-Analysis-Driven Plugins
+  authors: Jaemin Hong, Kanguk Lee, Hanliang Zhang, Hyunhee Kang, Eunsu Kim, Justin Restivo, Thanos Typaldos, Ramla Ijaz, Sukyoung Ryu, and Zhong Shao
+  venue: IEEE Security & Privacy
+  date: July 2026
+  link: https://ieeexplore.ieee.org/document/11616563
+  award:
+  research:
+
+- title: Failing with Purpose: Dangling Coverage-Guided Negative Test Generation from a Mechanized P4 Type System
+  authors: Jaehyun Lee, Seokhun Jeong, and Sukyoung Ryu
+  venue: FSE 2026
+  date: July 2026
+  link: https://doi.org/10.1145/3797109
+  award:
+  research: spec
+  short: FSE 2026
+
+- title: Mechanized Specifications for Real-World Programming Languages
+  authors: Sukyoung Ryu, Seokhun Jeong, and Jaehyun Lee
+  venue: PLDI 2026 Tutorial
+  date: June 2026
+  link: https://pldi26.sigplan.org/details/pldi-2026-tutorials/5/Mechanized-Specifications-for-Real-World-Programming-Languages
+  award:
+  research:
+
+- title: Selective Feature-Sensitive Coverage for Conformance Testing of Programming Languages
+  authors: Kanguk Lee, Seunghwan Kim, Jihyeok Park, and Sukyoung Ryu
+  venue: ACM TOSEM
+  date: April 2026
+  link: https://doi.org/10.1145/3808231
+  award:
+  research:
