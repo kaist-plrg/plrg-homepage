@@ -1,0 +1,71 @@
+# Publishes the site to GitHub Pages on every push to main.
+# The footer "Last updated" is set to the month of the latest commit (Korea time).
+# One-time setup: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.pages.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check data files
+        run: |
+          node - <<'JS'
+          const fs = require('fs'), { parse } = require('./site.js');
+          let bad = 0;
+          const err = (f, m) => { bad++; console.log(`::error file=${f}::${m}`); };
+          const read = f => { try { return parse(fs.readFileSync(f, 'utf8'), f); } catch (e) { err(f, e.message); } };
+          fs.readdirSync('data').filter(f => f.endsWith('.yml')).forEach(f => read('data/' + f));
+          // Publications (both files): required fields, a 4-digit year in the date, known research ids.
+          const ids = (((read('data/settings.yml') || {}).research || {}).areas || []).map(a => a.id);
+          let total = 0;
+          for (const f of ['data/publications.yml', 'data/publications-until-2025.yml']) {
+            const text = fs.readFileSync(f, 'utf8').split('\n');
+            const pubs = read(f) || [];
+            total += pubs.length;
+            let at = 0;
+            pubs.forEach(p => {
+              at = text.findIndex((l, i) => i >= at && /^\s*- /.test(l)) + 1;
+              for (const k of ['title', 'authors', 'venue', 'date']) if (!String(p[k] || '').trim()) err(f, `line ${at}: "${k}" 칸이 비어 있습니다`);
+              if (!/\d{4}/.test(String(p.date))) err(f, `line ${at}: date에 연도가 없습니다 (예: June 2027)`);
+              String(p.research || '').split(',').map(x => x.trim()).filter(Boolean).forEach(r => { if (!ids.includes(r)) err(f, `line ${at}: research "${r}" 는 없는 분야입니다 (가능: ${ids.join(', ')})`); });
+            });
+          }
+          const prof = read('data/profile.yml') || {};
+          if (prof.photo && !fs.existsSync('photos/' + prof.photo)) err('data/profile.yml', `photos/${prof.photo} 파일이 없습니다`);
+          if (bad) process.exit(1);
+          console.log(`OK: publications ${total}`);
+          JS
+      - name: Build
+        run: |
+          mkdir _site
+          cp -r *.html site.js style.css data photos _site/
+          [ -f CNAME ] && cp CNAME _site/ || true
+          # Photos tab: list every image in photos/gallery/ (the page sorts them by file name)
+          node -e "const fs=require('fs');fs.writeFileSync('_site/photos/gallery/list.json',JSON.stringify(fs.readdirSync('photos/gallery').filter(f=>/\.(png|jpe?g|gif|webp|avif)$/i.test(f))))"
+          updated=$(TZ=Asia/Seoul git log -1 --date=format-local:'%b %Y' --format=%cd)
+          sed -i "s/Last updated [^<]*/Last updated $updated/" _site/*.html
+          echo "Last updated $updated"
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: pages
+        uses: actions/deploy-pages@v4
