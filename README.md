@@ -7,7 +7,7 @@
 
 ## 1. Overview
 
-| 화면 | 바꾸고 싶은 내용 | 파일 | 위치 |
+| 화면 | make changes | 파일 | 위치 |
 |---|---|---|---|
 | **Home** | 맨 위 큰 사진 | `photos/main/` | 폴더 안 사진 1장 |
 | | 큰 제목 / 소개 문단 | `data/settings.yml` | `home.headline` / `home.intro` |
