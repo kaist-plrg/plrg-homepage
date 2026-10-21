@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home — PLRG @ KAIST</title>
 <link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.png" sizes="32x32" type="image/png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 </head>
 <body data-page="home">
 <div class="page">
@@ -22,6 +25,7 @@
 (function(){var b=document.querySelector('.menu'),n=document.getElementById('nav');var set=function(o){document.body.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);};b.addEventListener('click',function(){set(!document.body.classList.contains('nav-open'));});document.addEventListener('click',function(e){if(!e.target.closest('header'))set(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
 <main class="wrap">
+  <div class="home-photo" id="home-photo"></div>
   <section class="hero">
     <h1 id="headline" style="margin: 0 0 20px; max-width: 880px;"></h1>
     <p class="lede" id="lede"></p>

@@ -1,17 +1,8 @@
-# ═════════════════════════════════════════════════════════════════════════
-#  논문 목록 — 2025년 이전     (과거 논문을 고칠 때만 여는 파일)
-#  새 논문은 publications.yml 에 추가하세요. 형식은 완전히 같습니다.
-# ═════════════════════════════════════════════════════════════════════════
-# ─ 형식 ──────────────────────────────────────────────────────────────────
-#  YAML 서브셋 (site.js 내장 파서): 맵 / 리스트 / 스칼라, 들여쓰기는 스페이스.
-#  따옴표 선택, # 주석(줄 전체 또는 값 뒤 " # "), yes/no → bool, 정수 → number.
-#  미지원: flow 문법([a, b] / {k: v}), 멀티라인(| >), 앵커. 오류 시 배포 중단 + Actions 로그에 파일:줄.
-# ─────────────────────────────────────────────────────────────────────────
-#
-# ▶ 빠진 과거 논문 추가
-#   1. 아래 예시 블록을 파일 아무 곳에나 추가 (순서 무관).
-#   2. 해당 없는 칸은 비워둠.
-#   3. 정렬은 site.js 가 date 기준으로 처리 (Home·Publications·Research).
+# ────────────────────────────────────────────────────────────
+#  논문 ~2025년        → Home · Publications · Research 페이지
+#  과거 논문 수정용. 새 논문은 publications.yml 에 추가 (형식 동일)
+# ────────────────────────────────────────────────────────────
+#  수정   값만 변경 · 삭제는 블록(- title: ~ 다음 - title: 전) 통째로
 #
 # - title: Paper Title
 #   authors: First Author, Second Author, and Sukyoung Ryu
@@ -21,20 +12,21 @@
 #   award:
 #   research:
 #
-# 칸 설명
-#   date      월 + 연도 (October 2027). 아직 미정이면 "To appear 2027"
-#   link      논문 링크. 없으면 비워두기
-#   award     수상 이름 (예: ACM SIGSOFT Distinguished Paper Award). 없으면 비워두기
-#   research  Research 페이지의 어느 분야 아래에 띄울지 (화면에는 안 보이는 표시용 칸)
-#             비워두면 Research 페이지에는 안 나옴. 두 분야: "rust, analysis"
-#             쓸 수 있는 id (data/settings.yml → research → areas):
-#               spec       Mechanized Specifications and Language Testing
-#               rust       Automatic C-to-Rust Translation
-#               analysis   Program Analysis and Type Systems
-#               quantum    Quantum and Probabilistic Programming
-#   short     (선택) research 를 쓸 때 Research 페이지 괄호 안 짧은 학회명 (예: OOPSLA 2027). 없으면 venue 사용
-#   section   (선택, 드묾) Technical Reports / Refereed Articles / Refereed Chapters in Books — 맨 아래 별도 섹션
-
+#  title / authors / venue   필수
+#  date       필수. "October 2027" · 미정이면 "To appear 2027"
+#  link       제목에 걸리는 링크 (없으면 비움)
+#  award      수상 이름 — venue 뒤에 표시 (없으면 비움)
+#  research   Research 페이지에 띄울 분야 id (없으면 비움 · 여러 개: rust, analysis)
+#               spec      Mechanized Specifications and Language Testing
+#               rust      Automatic C-to-Rust Translation
+#               analysis  Program Analysis and Type Systems
+#               quantum   Quantum and Probabilistic Programming
+#  short      (선택) Research 페이지 괄호 안 학회명. 없으면 venue
+#  section    (선택) 연도별 목록 대신 맨 아래 별도 묶음으로. 이름 목록·설명: settings.yml → publications.sections
+#               Refereed Chapters in Books   심사를 거친 책의 챕터
+#               Refereed Articles            학회·저널 논문이 아닌 기고 (매거진, 행사 발표문 등)
+#               Technical Reports            기술 보고서
+# ────────────────────────────────────────────────────────────
 
 - title: WEST: Specification-Based Test Generation for WebAssembly
   authors: Dongjun Youn, Wonho Shin, and Sukyoung Ryu

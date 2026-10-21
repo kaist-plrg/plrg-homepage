@@ -1,44 +1,39 @@
-# ═════════════════════════════════════════════════════════════════════════
-#  교수님 페이지 (ryu.html) — 상단 프로필 / Overview 탭 / Biography 탭
-#  (Photos 탭은 photos/gallery/ 폴더에 사진을 넣으면 자동)
-# ═════════════════════════════════════════════════════════════════════════
-# ─ 형식 ──────────────────────────────────────────────────────────────────
-#  YAML 서브셋 (site.js 내장 파서): 맵 / 리스트 / 스칼라, 들여쓰기는 스페이스.
-#  따옴표 선택, # 주석(줄 전체 또는 값 뒤 " # "), yes/no → bool, 정수 → number.
-#  미지원: flow 문법([a, b] / {k: v}), 멀티라인(| >), 앵커. 오류 시 배포 중단 + Actions 로그에 파일:줄.
-# ─────────────────────────────────────────────────────────────────────────
+# ────────────────────────────────────────────────────────────
+#  교수님 페이지 (ryu.html)
+#    상단 프로필   name · photo · position · links
+#    Overview 탭   overview:  아래 섹션들
+#    Biography 탭  biography: 아래 섹션들
+#    Photos 탭     photos/gallery/ 폴더 (이 파일 아님)
+# ────────────────────────────────────────────────────────────
+#  섹션 = 제목 + 내용. 내용은 문단(text) 또는 목록(items) — 순서 = 화면 순서
 #
-# ▶ 링크: [보이는 글자](https://주소) — 한 줄에 여러 개 가능
-#     - PLRG@KAIST Research Stories: Interviews (Korean) [44Bits](https://...) · [곽곽](https://...)
+#   - heading: Selected Honors        # 섹션 제목
+#     items:                          # 목록: 한 줄 = 화면의 한 줄
+#       - New Award, 2027
+#       - Talk title [Event 2027](https://...) · [Slides](https://...)
 #
-# ▶ 목록에 한 줄 추가 (수상·강연·활동 등): 해당 items: 아래에 "- ..." 한 줄. 위에 쓸수록 화면에서도 위.
+#   - heading: About
+#     text: One paragraph.            # 문단
 #
-# ▶ 새 섹션 추가: 아래 블록을 overview: 또는 biography: 안 원하는 위치에 붙이기
-#
-#   - heading: Selected Awards        (섹션 제목)
-#     items:                          (목록일 때)
-#       - First item, 2027
-#       - Second item [link](https://...)
-#
-#   - heading: About                  (문단일 때는 items 대신 text)
-#     text: One paragraph of text.
-#
-# ▶ 섹션 순서 = 화면 순서. 섹션 삭제는 "- heading:" 부터 다음 "- heading:" 전까지 지우기.
+#  항목 추가     해당 items: 에 "- ..." 한 줄 (위에 쓸수록 위에 표시)
+#  링크          [보이는 글자](https://주소) — 한 줄에 여러 개 가능
+#  새 섹션       위 블록을 overview: / biography: 안 원하는 위치에 붙이기
+#  순서·이동·삭제  블록(- heading: ~ 다음 - heading: 전) 통째로
+# ────────────────────────────────────────────────────────────
 
-
-# ── 상단 프로필 ──────────────────────────────────────
+# ── 상단 프로필 ────────────────────────────────────────
 name: Sukyoung Ryu
-# photos/ 폴더 안의 파일명
+# 프로필 사진 — photos/ 폴더 안의 파일 이름
 photo: ryu.png
 position: Professor · [School of Computing](https://cs.kaist.ac.kr), [KAIST](https://www.kaist.ac.kr/en/)
-# 이름 아래 주황색 링크들
+# 이름 아래 주황색 링크 — 한 줄 = 링크 하나
 links:
   - [sryu.cs [at] kaist.ac.kr](mailto:sryu.cs@kaist.ac.kr)
   - [GitHub](https://github.com/sukyoung)
   - [YouTube](https://www.youtube.com/@SukyoungRyu)
 
 
-# ── Overview 탭
+# ── Overview 탭 ────────────────────────────────────────
 overview:
   - heading: Research
     text: Programming languages, software engineering, information security, and quantum computing
@@ -69,7 +64,7 @@ overview:
       - Programming Languages Implementation Summer School (PLISS) [2026](https://pliss.org/2026/index.html)
       - Oregon Programming Languages Summer School (OPLSS) [2023](https://www.cs.uoregon.edu/research/summerschool/summer23/)
 
-# ── Biography 탭
+# ── Biography 탭 ────────────────────────────────────────
 biography:
   - heading: About
     text: Sukyoung Ryu is a Professor in the School of Computing at KAIST. She earned her BS, MS, and Ph.D. in Computer Science from KAIST and worked at Sun Microsystems and Harvard University before joining KAIST. Her primary research interests include programming languages, software engineering, information security, and quantum computing. She received research awards from Google and Sun Microsystems, and Distinguished Paper Awards from ACM SIGSOFT. She has served as a Program Committee Chair and General Chair for conferences in the Programming Language and Software Engineering communities. She served as an associate editor of IEEE TSE and a member of ACM SIGPLAN EC, and she is currently a co-Chair of ACM SIGPLAN CARES.

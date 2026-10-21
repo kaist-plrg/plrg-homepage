@@ -67,6 +67,12 @@
   // Keep short sentence-opening words ("We", "It", "A") glued to the next word so a line never ends right after a sentence starts.
   const tidy = el => { const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT); let t; while ((t = w.nextNode())) t.nodeValue = t.nodeValue.replace(/(^|[.!?]\s)(\p{Lu}\p{L}{0,2}) /gu, '$1$2 '); };
   const settings = load('settings');
+  // Image files in a photos/ subfolder, sorted by name. The deploy writes <dir>/list.json;
+  // a local preview server's folder listing is used as a fallback.
+  const IMG = /\.(png|jpe?g|gif|webp|avif)$/i;
+  const images = dir => fetch(dir + '/list.json').then(r => { if (!r.ok) throw 0; return r.json(); })
+    .catch(() => fetch(dir + '/').then(r => r.text()).then(t => [...t.matchAll(/href="([^"?#/]+)"/g)].map(m => decodeURIComponent(m[1]))))
+    .then(files => [...new Set(files)].filter(f => IMG.test(f)).sort((a, b) => a.localeCompare(b, undefined, { numeric: true })));
   // Papers live in two files with the same format (2026~ and older); the site merges them and sorts by date.
   const PUB_FILES = ['publications', 'publications-until-2025'];
   const loadPubs = () => Promise.all(PUB_FILES.map(load)).then(lists => [].concat(...lists.map(l => Array.isArray(l) ? l : [])));
@@ -97,10 +103,14 @@
   };
 
   if (page === 'home') {
+    // Main photo: the image in photos/main/ (one file; any name).
+    images('photos/main').then(list => {
+      if (list.length) $('#home-photo').innerHTML = `<img src="photos/main/${esc(encodeURIComponent(list[0]))}" alt="PLRG">`;
+    }).catch(() => {});
     settings.then(s => {
-      $('#headline').innerHTML = [].concat(s.home.headline).map(esc).join('<br>');
+      $('#headline').innerHTML = [].concat(s.home.headline).map(esc).join(' <br>'); // space keeps words apart where <br> is hidden (mobile)
       $('#lede').innerHTML = md(s.home.intro); tidy($('#lede'));
-      $('#areas').innerHTML = s.research.areas.map(a => `<li class="small"><a href="research.html" style="color:#000">${esc(a.title)}</a> <span class="muted">· ${esc(a.keywords)}</span></li>`).join('');
+      $('#areas').innerHTML = s.research.areas.map(a => `<li class="small"><a href="research.html#area-${esc(a.id)}" style="color:#000">${esc(a.title)}</a> <span class="muted">· ${esc(a.keywords)}</span></li>`).join('');
     }).catch(show('#lede'));
     // The newest papers, regardless of "research". How many: settings.yml → home → recent_publications.
     Promise.all([loadPubs().then(byDate), settings]).then(([pubs, s]) => {
@@ -121,9 +131,21 @@
           const tail = '(' + esc(p.short || p.venue) + ')' + (p.award ? ' · ' + esc(String(p.award).replace('ACM SIGSOFT ', '')) : '');
           return `<li class="small">${t} <span class="muted">${tail}</span></li>`;
         }).join('');
-        return `<section class="area"><h2>${esc(a.title)}</h2><p>${esc(a.description)}</p>${sel.length ? `<ul>${items}</ul>` : ''}</section>`;
+        return `<section class="area" id="area-${esc(a.id)}"><h2>${esc(a.title)}</h2><p>${esc(a.description)}</p>${sel.length ? `<ul>${items}</ul>` : ''}</section>`;
       }).join('');
       document.querySelectorAll('.area p').forEach(tidy);
+      // Arriving from Home (research.html#area-<id>): bring that area to the middle of the screen,
+      // or to the top if it is taller than the space below the sticky header.
+      const target = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (target) {
+        const head = $('header').offsetHeight, room = window.innerHeight - head;
+        const r = target.getBoundingClientRect(), y = window.scrollY + r.top;
+        const want = target.offsetHeight < room ? y - head - (room - target.offsetHeight) / 2 : y - head;
+        // The last areas can't scroll that far on their own: add just enough space below the list.
+        const short = want - (document.documentElement.scrollHeight - window.innerHeight);
+        if (short > 0) $('main').style.paddingBottom = (parseFloat(getComputedStyle($('main')).paddingBottom) + short) + 'px';
+        window.scrollTo(0, Math.max(0, want));
+      }
     }).catch(show('#areas'));
   }
 
@@ -136,7 +158,8 @@
       main.forEach(p => { const k = p.year >= cutoff ? String(p.year) : 'Before ' + cutoff; (by[k] = by[k] || []).push(p); });
       const keys = Object.keys(by).sort((a, b) => a.startsWith('B') ? 1 : b.startsWith('B') ? -1 : Number(b) - Number(a));
       const groups = keys.map(k => ({ label: k, items: by[k] }));
-      ['Refereed Chapters in Books', 'Refereed Articles', 'Technical Reports'].forEach(sec => {
+      // Separate groups at the bottom, in the order listed in settings.yml → publications.sections.
+      [].concat(s.publications.sections || []).forEach(sec => {
         const items = pubs.filter(p => p.section === sec); if (items.length) groups.push({ label: sec, items });
       });
       $('#list').innerHTML = groups.map(g => `<section class="year-sec"><h2>${esc(g.label)}</h2><ol class="pubs">${g.items.map(p => pubItem(p, { withMonth: true })).join('')}</ol></section>`).join('');
@@ -166,14 +189,9 @@
       $('#panel-main').innerHTML = sections(p.overview);
       $('#panel-biography').innerHTML = sections(p.biography);
     }).catch(show('#profile'));
-    // Photos tab: every image in photos/gallery/, sorted by file name. Caption = file name without the
-    // leading number and extension ("3 August 2021.png" → "August 2021"). The deploy writes list.json;
-    // a local preview server's folder listing is used as a fallback.
-    const IMG = /\.(png|jpe?g|gif|webp|avif)$/i;
-    fetch('photos/gallery/list.json').then(r => { if (!r.ok) throw 0; return r.json(); })
-      .catch(() => fetch('photos/gallery/').then(r => r.text()).then(t => [...t.matchAll(/href="([^"?#/]+)"/g)].map(m => decodeURIComponent(m[1]))))
-      .then(files => {
-        const list = [...new Set(files)].filter(f => IMG.test(f)).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    // Photos tab: every image in photos/gallery/. Caption = file name without the leading number
+    // and extension ("3 August 2021.png" → "August 2021").
+    images('photos/gallery').then(list => {
         $('#gallery').innerHTML = list.map(f => { const cap = f.replace(IMG, '').replace(/^\d+[\s._-]*/, ''); return `<li><img src="photos/gallery/${esc(encodeURIComponent(f))}" alt="${esc(cap)}"><div class="cap">${esc(cap)}</div></li>`; }).join('');
       }).catch(show('#gallery'));
   }
