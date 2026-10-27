@@ -1,11 +1,11 @@
 /* Type scale — one value per role. Sizes: title 34 · section 22 · body 17 · small 15 · caption 13.
-   Line height: headings 1.25 · paragraphs 1.6 · everything else 1.5 · caption 1.4.
+   Line height: headings 1.2 · paragraphs 1.5 · everything else 1.4 · caption 1.35.
    Tracking: headings 0 · text -0.015em. */
 :root {
   --fs-title: 34px; --fs-section: 22px; --fs-body: 17px; --fs-small: 15px; --fs-caption: 13px;
-  --lh-heading: 1.25; --lh-text: 1.5; --lh-prose: 1.6; --lh-caption: 1.4;
+  --lh-heading: 1.2; --lh-text: 1.4; --lh-prose: 1.5; --lh-caption: 1.35;
   --ls-text: -0.015em;
-  --gap-list: 10px; --gap-pubs: 16px; --pad-section: 32px; --head-gap: 16px;
+  --gap-list: 8px; --gap-pubs: 14px; --pad-section: 28px; --head-gap: 12px;
 }
 p, h1, li, .lede { text-wrap: pretty; }
 /* Paragraphs of running text */
@@ -69,7 +69,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 a.site { color: #000; text-decoration: none; }
 a.site:hover { text-decoration: underline;  }
 a.site .lk { font-weight: 400; font-size: 0.85em; color: rgba(60,60,67,0.6); }
-.alumni { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 32px; }
+.alumni { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px 32px; }
 .alum { display: flex; flex-direction: column; gap: 2px; font-size: var(--fs-small); overflow-wrap: anywhere; }
 .alum .who { display: block; }
 .alum .who .muted, .alum > .muted { font-size: var(--fs-caption); line-height: var(--lh-caption); }
@@ -95,11 +95,11 @@ footer .nowrap { white-space: nowrap; }
   .hero { padding: 56px 0 44px; }
   .year-sec { grid-template-columns: 120px minmax(0, 1fr); gap: 20px; }
   .person { grid-template-columns: minmax(0, 220px) minmax(0, 1fr); }
-  .alumni { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .alumni { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 24px; }
   .pub { grid-template-columns: 88px minmax(0, 1fr); gap: 12px; }
 }
 @media (max-width: 640px) {
-  :root { --fs-title: 26px; --fs-section: 20px; --fs-body: 16px; --pad-section: 24px; }
+  :root { --fs-title: 26px; --fs-section: 20px; --fs-body: 16px; --pad-section: 20px; }
   .wrap { padding: 0 20px; }
   #nav { padding: 4px 20px 12px; }
   h1 { margin: 32px 0 16px; }
@@ -111,10 +111,9 @@ footer .nowrap { white-space: nowrap; }
   .pub { grid-template-columns: 1fr; gap: 2px; }
   .year-sec { grid-template-columns: 1fr; gap: 12px; }
   .person { grid-template-columns: 1fr; gap: 2px; }
-  .alumni { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 16px; }
+  .alumni { grid-template-columns: 1fr; gap: 14px; }
   footer .wrap { padding: 16px 20px; flex-direction: column; gap: 4px; }
 }
-@media (max-width: 400px) { .alumni { grid-template-columns: 1fr; } }
 /* profile */
 .profile { display: grid; grid-template-columns: 128px minmax(0, 1fr); gap: 28px; align-items: center; padding: 32px 0 40px; }
 .avatar { width: 128px; height: 128px; border-radius: 50%; object-fit: cover; background: rgba(118,118,128,0.12); }
