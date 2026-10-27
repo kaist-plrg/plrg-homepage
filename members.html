@@ -25,7 +25,7 @@
 (function(){var b=document.querySelector('.menu'),n=document.getElementById('nav');var set=function(o){document.body.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);};b.addEventListener('click',function(){set(!document.body.classList.contains('nav-open'));});document.addEventListener('click',function(e){if(!e.target.closest('header'))set(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
 <main class="wrap">
-  <h1 style="margin: 56px 0 8px;">Members</h1>
+  <h1 style="margin: var(--page-top) 0 8px;">Members</h1>
   <div id="groups"></div>
   <section class="group"><h2>Alumni</h2><ul id="alumni" class="alumni"></ul></section>
 </main>

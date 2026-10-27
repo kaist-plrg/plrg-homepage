@@ -25,7 +25,7 @@
 (function(){var b=document.querySelector('.menu'),n=document.getElementById('nav');var set=function(o){document.body.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);};b.addEventListener('click',function(){set(!document.body.classList.contains('nav-open'));});document.addEventListener('click',function(e){if(!e.target.closest('header'))set(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
 <main class="wrap">
-  <p class="small" style="margin: 32px 0 0;"><a href="members.html" class="back">← Members</a></p>
+  <p class="small" style="margin: 24px 0 0;"><a href="members.html" class="back">← Members</a></p>
   <section class="profile" id="profile"></section>
   <nav class="tabs" aria-label="Sections">
     <a href="#" class="tab on" data-tab="main" data-label="Overview"><span>Overview</span></a>

@@ -25,7 +25,7 @@
 (function(){var b=document.querySelector('.menu'),n=document.getElementById('nav');var set=function(o){document.body.classList.toggle('nav-open',o);b.setAttribute('aria-expanded',o);};b.addEventListener('click',function(){set(!document.body.classList.contains('nav-open'));});document.addEventListener('click',function(e){if(!e.target.closest('header'))set(false);});document.addEventListener('keydown',function(e){if(e.key==='Escape')set(false);});})();
 </script>
 <main class="wrap">
-  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 56px 0 8px;">
+  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: var(--page-top) 0 8px;">
     <h1 style="margin: 0;">Publications</h1>
     <span class="small muted nowrap"><span id="count"></span> · <a href="https://dblp.org/pid/03/2760.html">DBLP</a></span>
   </div>
