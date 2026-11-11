@@ -145,3 +145,27 @@ a.back { color: #000; }
   .tabs { gap: 20px; }
   .gallery { grid-template-columns: 1fr; gap: 14px; padding: 12px 0; }
 }
+
+/* ── Home only ─────────────────────────────────────────────
+   Three sizes on this page: title · section heading · text (15px for intro, lists and links). */
+[data-page="home"] .lede,
+[data-page="home"] .areas,
+[data-page="home"] .pubs,
+[data-page="home"] .sec-head .small { font-size: 15px; }
+[data-page="home"] .sec { padding: 24px 0; }
+[data-page="home"] .sec-head { margin-bottom: 14px; }
+[data-page="home"] .areas { gap: 8px; }
+[data-page="home"] .pubs { gap: 16px; }
+
+/* ── Research page only ────────────────────────────────────
+   Spacing steps: between areas 32 > description → papers 18 > heading → description 10 > between papers 6.
+   Description is a 16px paragraph; selected papers are a 14px block set off by a left rule. */
+[data-page="research"] .area { padding: 32px 0; }
+[data-page="research"] .area h2 { margin-bottom: 10px; }
+[data-page="research"] .area p { margin: 0 0 18px; }
+[data-page="research"] .area ul { gap: 6px; padding: 2px 0 2px 16px; border-left: 2px solid rgba(60,60,67,0.2); }
+[data-page="research"] .area ul li { line-height: 1.4; }
+@media (max-width: 640px) {
+  [data-page="research"] .area { padding: 24px 0; }
+  [data-page="research"] .area p { margin-bottom: 14px; }
+}
