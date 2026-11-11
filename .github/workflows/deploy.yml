@@ -67,9 +67,6 @@ jobs:
           node -e "const fs=require('fs');for(const d of ['photos/gallery','photos/main'])if(fs.existsSync(d))fs.writeFileSync('_site/'+d+'/list.json',JSON.stringify(fs.readdirSync(d).filter(f=>/\.(png|jpe?g|gif|webp|avif)$/i.test(f))))"
           updated=$(TZ=Asia/Seoul git log -1 --date=format-local:'%b %Y' --format=%cd)
           sed -i "s/Last updated [^<]*/Last updated $updated/" _site/*.html
-          # Versioned CSS/JS URLs so browsers fetch the new files right after each deploy
-          v=$(git rev-parse --short HEAD)
-          sed -i "s/href=\"style.css\"/href=\"style.css?v=$v\"/; s/src=\"site.js\"/src=\"site.js?v=$v\"/" _site/*.html
           echo "Last updated $updated"
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
