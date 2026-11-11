@@ -152,20 +152,23 @@ a.back { color: #000; }
 [data-page="home"] .areas,
 [data-page="home"] .pubs,
 [data-page="home"] .sec-head .small { font-size: 15px; }
-[data-page="home"] .sec { padding: 24px 0; }
-[data-page="home"] .sec-head { margin-bottom: 14px; }
-[data-page="home"] .areas { gap: 8px; }
-[data-page="home"] .pubs { gap: 16px; }
+[data-page="home"] .sec-head { margin-bottom: calc(var(--pad-section) + 1px); } /* heading → content */
+[data-page="home"] .sec { padding-top: calc(var(--pad-section) + 2px); } /* rule → heading, 2px more than heading → content */
+[data-page="home"] .areas { gap: 5px; margin-top: -3px; margin-bottom: 3px; } /* Research list: offset the line spacing above its first row so the gap under the heading reads like Recent Publications */
+[data-page="home"] .pubs { gap: 10px; }
 
 /* ── Research page only ────────────────────────────────────
-   Spacing steps: between areas 32 > description → papers 18 > heading → description 10 > between papers 6.
+   Spacing: papers → next rule 18, rule → heading 14, description → papers 14, heading → description 8, between papers 6.
    Description is a 16px paragraph; selected papers are a 14px block set off by a left rule. */
-[data-page="research"] .area { padding: 32px 0; }
-[data-page="research"] .area h2 { margin-bottom: 10px; }
-[data-page="research"] .area p { margin: 0 0 18px; }
+[data-page="research"] .area { padding: 14px 0 18px; }
+[data-page="research"] .area h2 { margin-bottom: 8px; }
+[data-page="research"] .area p { margin: 0 0 14px; }
 [data-page="research"] .area ul { gap: 6px; padding: 2px 0 2px 16px; border-left: 2px solid rgba(60,60,67,0.2); }
 [data-page="research"] .area ul li { line-height: 1.4; }
 @media (max-width: 640px) {
-  [data-page="research"] .area { padding: 24px 0; }
-  [data-page="research"] .area p { margin-bottom: 14px; }
+  [data-page="research"] .area { padding: 12px 0 14px; }
+  [data-page="research"] .area p { margin-bottom: 12px; }
 }
+
+/* ── Profile page, Biography tab only ── About paragraph at the same size as the Selected Honors list */
+#panel-biography .prow p { font-size: var(--fs-small); }
