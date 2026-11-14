@@ -192,7 +192,17 @@
     // Photos tab: every image in photos/gallery/. Caption = file name without the leading number
     // and extension ("3 August 2021.png" → "August 2021").
     images('photos/gallery').then(list => {
-        $('#gallery').innerHTML = list.map(f => { const cap = f.replace(IMG, '').replace(/^\d+[\s._-]*/, ''); return `<li><img src="photos/gallery/${esc(encodeURIComponent(f))}" alt="${esc(cap)}"><div class="cap">${esc(cap)}</div></li>`; }).join('');
-      }).catch(show('#gallery'));
+      $('#gallery').innerHTML = list.map(f => {
+        const cap = f.replace(IMG, '').replace(/^\d+[\s._-]*/, '');
+        const src = `photos/gallery/${encodeURIComponent(f)}`;
+        return `<li>
+          <a href="${esc(src)}" target="_blank" rel="noopener"
+             aria-label="${esc(cap || 'Photo')} (opens in a new tab)">
+            <img src="${esc(src)}" alt="${esc(cap)}" loading="lazy">
+          </a>
+          <div class="cap">${esc(cap)}</div>
+        </li>`;
+      }).join('');
+    }).catch(show('#gallery'));
   }
 })();
