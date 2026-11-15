@@ -86,7 +86,7 @@
   date: July 2026
   link: https://ieeexplore.ieee.org/document/11616563
   award:
-  research:
+  research: rust
 
 - title: Failing with Purpose: Dangling Coverage-Guided Negative Test Generation from a Mechanized P4 Type System
   authors: Jaehyun Lee, Seokhun Jeong, and Sukyoung Ryu
