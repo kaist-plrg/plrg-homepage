@@ -332,7 +332,7 @@
   authors: Shinhae Kim and Sukyoung Ryu
   venue: IEEE SecDev 2020
   date: September 2020
-  link: https://drive.google.com/file/d/1P4tqRdrp9gkq4VC7MJo-EQpsyOYq2-qt/view?usp=sharing
+  link: https://ieeexplore.ieee.org/document/9230065
   award:
   research:
 
@@ -340,7 +340,7 @@
   authors: Sungjae Hwang and Sukyoung Ryu
   venue: ICSE 2020
   date: July 2020
-  link: https://drive.google.com/file/d/1cwLc6xDWC63jiqlXnFipfqW1R6t0p-Py/view?usp=sharing
+  link: https://dl.acm.org/doi/10.1145/3377811.3380424
   award:
   research:
 
@@ -364,7 +364,7 @@
   authors: Sungho Lee and Sukyoung Ryu
   venue: ISSTA 2019
   date: July 2019
-  link: https://drive.google.com/uc?export=download&id=1PIy_FZ8YW9w5Fkt8h_h8oEDW80DV4duz
+  link: https://dl.acm.org/doi/10.1145/3293882.3330562
   award:
   research:
 
@@ -372,7 +372,7 @@
   authors: Sungho Lee
   venue: ISSTA 2019 Doctoral Symposium
   date: July 2019
-  link: https://drive.google.com/uc?export=download&id=1mDihiV9bXJMnSSeIFofttjnPeUUQPe9V
+  link: https://dl.acm.org/doi/10.1145/3293882.3338990
   award:
   research:
 
@@ -380,7 +380,7 @@
   authors: Sukyoung Ryu, Jihyeok Park, and Joonyoung Park
   venue: IEEE Software, Vol. 36, Issue 3
   date: May 2019
-  link: https://drive.google.com/uc?export=download&id=1IJkmJ4Q5Qvq2N5Pc4OG3ZRBB3EBjBqfd
+  link: https://ieeexplore.ieee.org/document/8254305
   award:
   research:
 
@@ -388,7 +388,7 @@
   authors: Sora Bae, Sungho Lee, and Sukyoung Ryu
   venue: ICSE 2019
   date: May 2019
-  link: https://drive.google.com/uc?export=download&id=1WBcvO7QsJxv1Epm9UBIEqEyXkegwrQlT
+  link: https://dl.acm.org/doi/10.1109/ICSE.2019.00038
   award:
   research:
 
@@ -412,7 +412,7 @@
   authors: Joonyoung Park, Alexander Jordan, and Sukyoung Ryu
   venue: FASE 2019
   date: April 2019
-  link: https://drive.google.com/uc?export=download&id=1R1wDBYILqw8-ZDfe0ZxIz1lmloclEYta
+  link: https://link.springer.com/chapter/10.1007/978-3-030-16722-6_3
   award:
   research:
 
@@ -429,7 +429,7 @@
   authors: Jaemin Hong, Jihyeok Park, and Sukyoung Ryu
   venue: Scala Symposium 2018
   date: September 2018
-  link: https://drive.google.com/uc?export=download&id=1AmaDCwAiiqe5eaBwktP3IqBcXSqzRkdC
+  link: https://dl.acm.org/doi/10.1145/3241653.3241657
   award:
   research:
 
@@ -470,7 +470,7 @@
   authors: Jihyeok Park, Joonyoung Park, Yoonkyong Lee, Chul-Joo Kim, Byoungoh Kim, and Sukyoung Ryu
   venue: ProWeb 2018
   date: April 2018
-  link: https://drive.google.com/uc?export=download&id=1KHYj7AZB4kouCc8fJE0EItE6HbrhEFLK
+  link: https://dl.acm.org/doi/abs/10.1145/3191697.3191732
   award:
   research:
 
@@ -534,7 +534,7 @@
   authors: Jihyeok Park, Xavier Rival, and Sukyoung Ryu
   venue: SOAP 2017
   date: June 2017
-  link: https://drive.google.com/uc?export=download&id=1k3MdYHGPFGtWYYTB2q9j0Tl7gpaxRYww
+  link: https://dl.acm.org/doi/10.1145/3088515.3088516
   award: Best Paper Award
   research:
 
@@ -542,7 +542,7 @@
   authors: Sora Bae, Joonyoung Park, and Sukyoung Ryu
   venue: FormaliSE 2017
   date: May 2017
-  link: https://drive.google.com/uc?export=download&id=1D-neZBbg2v1C4nk-hA8N52ghaI30_0Xe
+  link: https://dl.acm.org/doi/10.5555/3101290.3101308
   award:
   research:
 
@@ -550,7 +550,7 @@
   authors: Jihyeok Park, Yeonhee Ryou, Joonyoung Park, and Sukyoung Ryu
   venue: ICSE 2017 Demonstrations
   date: May 2017
-  link: https://drive.google.com/uc?export=download&id=1NNVlrfscAIcvyEuKuHLqEe7lwvw_p5p-
+  link: https://dl.acm.org/doi/10.1109/ICSE-C.2017.4
   award:
   research:
 
@@ -558,15 +558,7 @@
   authors: Changhee Park, Hyeonseung Im, and Sukyoung Ryu
   venue: DLS 2016
   date: October 2016
-  link: https://drive.google.com/uc?export=download&id=1ByvqXj1GQzUUmWofrI-SCi8kJ73ooOY6
-  award:
-  research:
-
-- title: Journey to Find Bugs in JavaScript Web Applications in the Wild
-  authors: Sukyoung Ryu
-  venue: ICFP 2016 Keynote
-  date: September 2016
-  link: https://www.youtube.com/watch?v=gEU9utf0sxE
+  link: https://dl.acm.org/doi/10.1145/2989225.2989228
   award:
   research:
 
@@ -582,7 +574,7 @@
   authors: Sungho Lee, Julian Dolby, and Sukyoung Ryu
   venue: ASE 2016
   date: September 2016
-  link: https://drive.google.com/uc?export=download&id=1x3n3tGkzxBsvvt-9fmeTGKfC9TEICG7X
+  link: https://dl.acm.org/doi/10.1145/2970276.2970368
   award:
   research:
 
@@ -598,7 +590,7 @@
   authors: Joonyoung Park, Inho Lim, and Sukyoung Ryu
   venue: ICSE 2016 SEIP
   date: May 2016
-  link: https://drive.google.com/uc?export=download&id=1lrxffoPpOCfOpuTr75E9h7YSz5aDuX3f
+  link: https://dl.acm.org/doi/10.1145/2889160.2889227
   award:
   research:
 
@@ -614,7 +606,7 @@
   authors: Changhee Park, Sooncheol Won, Joonho Jin, and Sukyoung Ryu
   venue: ASE 2015
   date: November 2015
-  link: https://drive.google.com/uc?export=download&id=1dHewF1m7CdtVnHn8e076YsWbu8RwhAgv
+  link: https://dl.acm.org/doi/10.1109/ASE.2015.27
   award:
   research:
 
@@ -622,7 +614,7 @@
   authors: Yoonseok Ko, Hongki Lee, Julian Dolby, and Sukyoung Ryu
   venue: ASE 2015
   date: November 2015
-  link: https://drive.google.com/uc?export=download&id=1_NhXgVAtT97OSshWOKIeUJqqGPNf283G
+  link: https://ieeexplore.ieee.org/document/7372042
   award:
   research:
 
@@ -630,7 +622,7 @@
   authors: Changhee Park and Sukyoung Ryu
   venue: ECOOP 2015
   date: July 2015
-  link: https://drive.google.com/uc?export=download&id=1m3e9WWqUt-8wkTN0_Yasmxen5vo5_Era
+  link: https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ECOOP.2015.735
   award: Best Artifact Award
   research:
 
@@ -646,7 +638,7 @@
   authors: Sungjae Hwang, Sungho Lee, Yongdae Kim, and Sukyoung Ryu
   venue: ASIACCS 2015
   date: April 2015
-  link: https://drive.google.com/uc?export=download&id=1U7KPZi9YjmuYJtsJzl1uypkZXCZKIZeC
+  link: https://dl.acm.org/doi/10.1145/2714576.2714638
   award:
   research:
 
