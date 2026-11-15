@@ -152,7 +152,7 @@
   if (page === 'publications') {
     Promise.all([loadPubs().then(byDate), settings]).then(([pubs, s]) => {
       const cutoff = Number(s.publications.group_before) || 2020;
-      $('#count').textContent = pubs.length + ' Papers';
+//      $('#count').textContent = pubs.length + ' Papers';
       const main = pubs.filter(p => !p.section);
       const by = {};
       main.forEach(p => { const k = p.year >= cutoff ? String(p.year) : 'Before ' + cutoff; (by[k] = by[k] || []).push(p); });
