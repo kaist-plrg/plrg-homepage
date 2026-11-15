@@ -478,7 +478,7 @@
   authors: Joonyoung Park, Kwangwon Sun, and Sukyoung Ryu
   venue: FASE 2018
   date: April 2018
-  link: https://drive.google.com/uc?export=download&id=12oyQRRNfcbcww3K2lU81WpgL7RmiuCqg
+  link: https://link.springer.com/chapter/10.1007/978-3-319-89363-1_8
   award:
   research:
 
@@ -486,7 +486,7 @@
   authors: Yeonhee Ryou and Sukyoung Ryu
   venue: ICST 2018
   date: April 2018
-  link: https://drive.google.com/uc?export=download&id=1_5Bpz7P4aP8IkasVozdg4nn71llH5aL9
+  link: https://ieeexplore.ieee.org/document/8367047
   award:
   research:
 
@@ -494,7 +494,7 @@
   authors: Sungho Lee, Sungjae Hwang, and Sukyoung Ryu
   venue: ASE 2017
   date: November 2017
-  link: https://drive.google.com/uc?export=download&id=1cAaM76QUSlByDkx72FpORfHlm3P42P3V
+  link: https://dl.acm.org/doi/10.5555/3155562.3155597
   award:
   research:
 
@@ -502,7 +502,7 @@
   authors: Yoonseok Ko, Xavier Rival, and Sukyoung Ryu
   venue: APLAS 2017
   date: November 2017
-  link: https://drive.google.com/uc?export=download&id=1VP8-rR22svj_q-0KBqeF-gKkKNsssnS4
+  link: https://link.springer.com/chapter/10.1007/978-3-319-71237-6_8
   award:
   research:
 
@@ -518,7 +518,7 @@
   authors: Keunhong Lee, Shinae Woo, Sanghyeon Seo, Jihyeok Park, Sukyoung Ryu, and Sue Moon
   venue: NetPL 2017
   date: August 2017
-  link: https://drive.google.com/uc?export=download&id=1qTZkO9GotMrgYd7XthjErxlVratk-7J0
+  link: https://conferences.sigcomm.org/sigcomm/2017/files/program-netpl/sigcomm17netpl-paper5.pdf
   award:
   research:
 
@@ -526,7 +526,7 @@
   authors: Sukyoung Ryu, Alexander Jordan, and Dongsun Kim
   venue: PLDI 2017 Tutorial
   date: June 2017
-  link: https://drive.google.com/uc?export=download&id=1Ky6SptzB_9dFaSkqOoAea3VjUsuTZDqP
+  link: 
   award:
   research:
 
@@ -686,7 +686,7 @@
   authors: Jihyeok Park
   venue: Modularity 2014
   date: April 2014
-  link: "JavaScript API Misuse Detection by Using TypeScript"
+  link: https://dl.acm.org/doi/10.1145/2584469.2584472
   award: ACM Student Research Competition 3rd
   research:
 
