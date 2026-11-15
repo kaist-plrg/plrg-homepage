@@ -80,11 +80,19 @@
   research: analysis
   short: OOPSLA 2025
 
-- title: Mechanizing the P4 Language Specification with P4-SpecTec
+- title: P4-SpecTec: A Language Mechanization Framework for P4
   authors: Jaehyun Lee, Seokhun Jeong, and Sukyoung Ryu
-  venue: P4 Developer Days
-  date: September 2025
-  link: https://p4.org/event/p4-developer-days-mechanizing-the-p4-language-specification-with-p4-spectec/
+  venue: 
+  date: October 2025
+  link: https://www.youtube.com/watch?v=Y_lRXfUszF0
+  award:
+  research:
+
+- title: P4-SpecTec: Mechanized Language Definition for P4
+  authors: Jaehyun Lee and Sukyoung Ryu
+  venue: PLSS 2025
+  date: July 2025
+  link: https://www.youtube.com/watch?v=a97P7VvCg6k
   award:
   research:
 
@@ -137,13 +145,14 @@
   award:
   research:
 
-# - title: P4-SpecTec: Mechanized Language Definition for P4
-#   authors: Jaehyun Lee, Yechan Woo, Nate Foster, and Sukyoung Ryu
-#   venue: P4 Workshop 2024
-#   date: October 2024
-#   link: https://www.youtube.com/watch?v=AcxAYvM8pnA
-#   award:
-#   research:
+- title: P4-SpecTec: Mechanized Language Definition for P4
+  authors: Jaehyun Lee, Yechan Woo, Nate Foster, and Sukyoung Ryu
+  venue: P4 Workshop 2024
+  date: October 2024
+  link: https://www.youtube.com/watch?v=AcxAYvM8pnA
+  award:
+  research:
+
 # - title: How to design, document, and implement programming languages
 #   authors: Sukyoung Ryu
 #   venue: CS Colloquium, Cornell University
