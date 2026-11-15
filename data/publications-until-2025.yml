@@ -137,21 +137,20 @@
   award:
   research:
 
-- title: P4-SpecTec: Mechanized Language Definition for P4
-  authors: Jaehyun Lee, Yechan Woo, Nate Foster, and Sukyoung Ryu
-  venue: P4 Workshop 2024
-  date: October 2024
-  link: https://www.youtube.com/watch?v=AcxAYvM8pnA
-  award:
-  research:
-
-- title: How to design, document, and implement programming languages
-  authors: Sukyoung Ryu
-  venue: CS Colloquium, Cornell University
-  date: August 2024
-  link: https://vod.video.cornell.edu/media/CS+Fall+2024+Colloquium-+Sukyoung+Ryu/1_d8x24bcp/352086902
-  award:
-  research:
+# - title: P4-SpecTec: Mechanized Language Definition for P4
+#   authors: Jaehyun Lee, Yechan Woo, Nate Foster, and Sukyoung Ryu
+#   venue: P4 Workshop 2024
+#   date: October 2024
+#   link: https://www.youtube.com/watch?v=AcxAYvM8pnA
+#   award:
+#   research:
+# - title: How to design, document, and implement programming languages
+#   authors: Sukyoung Ryu
+#   venue: CS Colloquium, Cornell University
+#   date: August 2024
+#   link: https://vod.video.cornell.edu/media/CS+Fall+2024+Colloquium-+Sukyoung+Ryu/1_d8x24bcp/352086902
+#   award:
+#   research:
 
 - title: Don't Write, but Return: Replacing Output Parameters with Algebraic Data Types in C-to-Rust Translation
   authors: Jaemin Hong and Sukyoung Ryu
