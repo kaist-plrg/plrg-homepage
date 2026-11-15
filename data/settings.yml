@@ -61,4 +61,4 @@ publications:
   sections:
     - Refereed Chapters in Books     # 심사를 거친 책의 챕터
     - Refereed Articles              # 학회·저널 논문이 아닌 기고 (매거진, 행사 발표문 등)
-    - Technical Reports              # 기술 보고서
+  # - Technical Reports              # 기술 보고서 (old)

@@ -915,14 +915,14 @@
   research:
   section: Refereed Chapters in Books
 
-- title: Project Fortress: A Multicore Language for Scientists and Engineers
-  authors: Sukyoung Ryu
-  venue: Grace Hopper Celebration of Women in Computing
-  date: October 2008
-  link:
-  award:
-  research:
-  section: Refereed Articles
+# - title: Project Fortress: A Multicore Language for Scientists and Engineers
+#   authors: Sukyoung Ryu
+#   venue: Grace Hopper Celebration of Women in Computing
+#   date: October 2008
+#   link:
+#   award:
+#   research:
+#   section: Refereed Articles
 
 - title: Project Fortress: A Multicore Language for Multicore Processors
   authors: Eric Allen, David Chase, Christine Flood, Victor Luchangco, Jan-Willem Maessen, Sukyoung Ryu, and Guy L. Steele Jr.
@@ -933,65 +933,65 @@
   research:
   section: Refereed Articles
 
-- title: JavaScript Module System: Exploring the Design Space (Extended with Formalization)
-  authors: Junhee Cho and Sukyoung Ryu
-  venue: Technical Report, KAIST
-  date: July 2013
-  link: https://drive.google.com/uc?export=download&id=1aCEJDJZZw6YcC48XpVioSVc_uTziGTK8
-  award:
-  research:
-  section: Technical Reports
+# - title: JavaScript Module System: Exploring the Design Space (Extended with Formalization)
+#   authors: Junhee Cho and Sukyoung Ryu
+#   venue: Technical Report, KAIST
+#   date: July 2013
+#   link: https://drive.google.com/uc?export=download&id=1aCEJDJZZw6YcC48XpVioSVc_uTziGTK8
+#   award:
+#   research:
+#   section: Technical Reports
 
-- title: A New Formalization of Subtyping to Match Subclasses to Subtypes
-  authors: Hyunik Na and Sukyoung Ryu
-  venue: Technical Report, KAIST
-  date: July 2013
-  link: https://drive.google.com/uc?export=download&id=11gvGEXLVmgzP5FfE-Z8HYjejkY9QW8t2
-  award:
-  research:
-  section: Technical Reports
+# - title: A New Formalization of Subtyping to Match Subclasses to Subtypes
+#   authors: Hyunik Na and Sukyoung Ryu
+#   venue: Technical Report, KAIST
+#   date: July 2013
+#   link: https://drive.google.com/uc?export=download&id=11gvGEXLVmgzP5FfE-Z8HYjejkY9QW8t2
+#   award:
+#   research:
+#   section: Technical Reports
 
-- title: All about the with Statement in JavaScript: Removing with Statements in JavaScript Applications
-  authors: Changhee Park, Hongki Lee, and Sukyoung Ryu
-  venue: Technical Report, KAIST
-  date: June 2013
-  link: https://drive.google.com/uc?export=download&id=14G-uWSsBB7kvsHHSj9efFalq21wRxlub
-  award:
-  research:
-  section: Technical Reports
+# - title: All about the with Statement in JavaScript: Removing with Statements in JavaScript Applications
+#   authors: Changhee Park, Hongki Lee, and Sukyoung Ryu
+#   venue: Technical Report, KAIST
+#   date: June 2013
+#   link: https://drive.google.com/uc?export=download&id=14G-uWSsBB7kvsHHSj9efFalq21wRxlub
+#   award:
+#   research:
+#   section: Technical Reports
 
-- title: MFFMM: Module Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
-  authors: Jieung Kim and Sukyoung Ryu
-  venue: Technical Report, KAIST
-  date: June 2013
-  link: https://drive.google.com/uc?export=download&id=1dqRpiXboH5KYIEn-YO9d0szYWnXYdw2Z
-  award:
-  research:
-  section: Technical Reports
+# - title: MFFMM: Module Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
+#   authors: Jieung Kim and Sukyoung Ryu
+#   venue: Technical Report, KAIST
+#   date: June 2013
+#   link: https://drive.google.com/uc?export=download&id=1dqRpiXboH5KYIEn-YO9d0szYWnXYdw2Z
+#   award:
+#   research:
+#   section: Technical Reports
 
-- title: Formal Specification of a JavaScript Module System
-  authors: Seonghoon Kang and Sukyoung Ryu
-  venue: Technical Report, KAIST
-  date: December 2011
-  link: https://drive.google.com/uc?export=download&id=1lb-R_ovOBw6N4k1aBovRy_QHL-W7G3xY
-  award:
-  research:
-  section: Technical Reports
+# - title: Formal Specification of a JavaScript Module System
+#   authors: Seonghoon Kang and Sukyoung Ryu
+#   venue: Technical Report, KAIST
+#   date: December 2011
+#   link: https://drive.google.com/uc?export=download&id=1lb-R_ovOBw6N4k1aBovRy_QHL-W7G3xY
+#   award:
+#   research:
+#   section: Technical Reports
 
-- title: Exact Type Parameterization and ThisType Support (Proofs)
-  authors: Hyunik Na, Sukyoung Ryu, and Kwangmoo Choe
-  venue: Technical Report, KAIST
-  date: October 2011
-  link: https://drive.google.com/uc?export=download&id=1jB-aWd14IBYPWHCHxNNcoSaqreZLh1bV
-  award:
-  research:
-  section: Technical Reports
+# - title: Exact Type Parameterization and ThisType Support (Proofs)
+#   authors: Hyunik Na, Sukyoung Ryu, and Kwangmoo Choe
+#   venue: Technical Report, KAIST
+#   date: October 2011
+#   link: https://drive.google.com/uc?export=download&id=1jB-aWd14IBYPWHCHxNNcoSaqreZLh1bV
+#   award:
+#   research:
+#   section: Technical Reports
 
-- title: FFMM: Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
-  authors: Jieung Kim and Sukyoung Ryu
-  venue: Technical Report, KAIST
-  date: June 2011
-  link: https://drive.google.com/uc?export=download&id=13hiQdxQvJ3yx1KMzuNeD3MJjdcIIOXvb
-  award:
-  research:
-  section: Technical Reports
+# - title: FFMM: Featherweight Fortress with Multiple Dispatch and Multiple Inheritance
+#   authors: Jieung Kim and Sukyoung Ryu
+#   venue: Technical Report, KAIST
+#   date: June 2011
+#   link: https://drive.google.com/uc?export=download&id=13hiQdxQvJ3yx1KMzuNeD3MJjdcIIOXvb
+#   award:
+#   research:
+#   section: Technical Reports
