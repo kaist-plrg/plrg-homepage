@@ -97,13 +97,13 @@
   research: spec
   short: FSE 2026
 
-- title: Mechanized Specifications for Real-World Programming Languages
-  authors: Sukyoung Ryu, Seokhun Jeong, and Jaehyun Lee
-  venue: PLDI 2026 Tutorial
-  date: June 2026
-  link: https://pldi26.sigplan.org/details/pldi-2026-tutorials/5/Mechanized-Specifications-for-Real-World-Programming-Languages
-  award:
-  research:
+# - title: Mechanized Specifications for Real-World Programming Languages
+#   authors: Sukyoung Ryu, Seokhun Jeong, and Jaehyun Lee
+#   venue: PLDI 2026 Tutorial
+#   date: June 2026
+#   link: https://pldi26.sigplan.org/details/pldi-2026-tutorials/5/Mechanized-Specifications-for-Real-World-Programming-Languages
+#   award:
+#   research:
 
 - title: Selective Feature-Sensitive Coverage for Conformance Testing of Programming Languages
   authors: Kanguk Lee, Seunghwan Kim, Jihyeok Park, and Sukyoung Ryu
