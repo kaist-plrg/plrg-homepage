@@ -88,13 +88,13 @@
   award:
   research:
 
-- title: Programming Language Research for Technical and Social Good: What PL Can Do for Good?
-  authors: Sukyoung Ryu
-  venue: PLDI 2025 Keynote
-  date: June 2025
-  link: https://www.youtube.com/watch?v=SNRLoOd9a6w
-  award:
-  research:
+# - title: Programming Language Research for Technical and Social Good: What PL Can Do for Good?
+#   authors: Sukyoung Ryu
+#   venue: PLDI 2025 Keynote
+#   date: June 2025
+#   link: https://www.youtube.com/watch?v=SNRLoOd9a6w
+#   award:
+#   research:
 
 - title: Automated Code Transformation for Distributed Training of TensorFlow Deep Learning Models
   authors: Yusung Sim, Wonho Shin, and Sungho Lee
@@ -253,13 +253,13 @@
   award:
   research:
 
-- title: Filling the gap between the JavaScript language specification and tools using the JISET family
-  authors: Sukyoung Ryu, Jihyeok Park, and Seungmin An
-  venue: PLDI 2022 Tutorial
-  date: June 2022
-  link: https://pldi22.sigplan.org/details/pldi-2022-tutorials/1/Filling-the-gap-between-the-JavaScript-language-specification-and-tools-using-the-JIS
-  award:
-  research:
+# - title: Filling the gap between the JavaScript language specification and tools using the JISET family
+#   authors: Sukyoung Ryu, Jihyeok Park, and Seungmin An
+#   venue: PLDI 2022 Tutorial
+#   date: June 2022
+#   link: https://pldi22.sigplan.org/details/pldi-2022-tutorials/1/Filling-the-gap-between-the-JavaScript-language-specification-and-tools-using-the-JIS
+#   award:
+#   research:
 
 - title: JSTAR: JavaScript Specification Type Analyzer using Refinement
   authors: Jihyeok Park, Seungmin An, Wonho Shin, Yusung Sim, and Sukyoung Ryu
@@ -458,13 +458,13 @@
   award:
   research:
 
-- title: Static Analysis of Android Applications for Finding Bugs and Security Vulnerabilities
-  authors: Sukyoung Ryu
-  venue: Keynote, <Programming> 2018
-  date: April 2018
-  link:
-  award:
-  research:
+# - title: Static Analysis of Android Applications for Finding Bugs and Security Vulnerabilities
+#   authors: Sukyoung Ryu
+#   venue: Keynote, <Programming> 2018
+#   date: April 2018
+#   link:
+#   award:
+#   research:
 
 - title: A Framework for Dynamic Inter-Device Task Dispatch with Eventual Consistency
   authors: Jihyeok Park, Joonyoung Park, Yoonkyong Lee, Chul-Joo Kim, Byoungoh Kim, and Sukyoung Ryu
@@ -522,13 +522,13 @@
   award:
   research:
 
-- title: Bug Detection in JavaScript Web Apps using the SAFE Framework
-  authors: Sukyoung Ryu, Alexander Jordan, and Dongsun Kim
-  venue: PLDI 2017 Tutorial
-  date: June 2017
-  link: 
-  award:
-  research:
+# - title: Bug Detection in JavaScript Web Apps using the SAFE Framework
+#   authors: Sukyoung Ryu, Alexander Jordan, and Dongsun Kim
+#   venue: PLDI 2017 Tutorial
+#   date: June 2017
+#   link: 
+#   award:
+#   research:
 
 - title: Revisiting Recency Abstraction for JavaScript: Towards an Intuitive, Compositional, and Efficient Heap Abstraction
   authors: Jihyeok Park, Xavier Rival, and Sukyoung Ryu
